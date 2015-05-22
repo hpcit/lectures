@@ -23,3 +23,10 @@ RUN wget --quiet \
     rm Miniconda-latest-Linux-x86_64.sh
 ENV PATH /opt/miniconda/bin:$PATH
 RUN chmod -R a+rx /opt/miniconda
+##########################
+# Install PyData modules and IPython dependencies
+RUN conda update --quiet --yes conda && \
+    conda install --quiet --yes $PYDATAPKG \
+        pip sqlalchemy cython pyzmq \
+        theano tornado jinja2 sphinx pygments nose readline \
+    && conda clean -y -t
