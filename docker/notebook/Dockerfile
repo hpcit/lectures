@@ -7,7 +7,7 @@ MAINTAINER Paolo D. <p.donoriodemeo@cinecait>
 # https://registry.hub.docker.com/u/twiecki/pydata-docker-jupyterhub
 
 ENV PYVERSION 2
-ENV PYDATAPKG six numpy scipy pandas matplotlib seaborn scikit-learn statsmodels
+ENV PYDATAPKG six numpy scipy pandas matplotlib seaborn bokeh scikit-learn
 
 ##########################
 # APT
@@ -27,6 +27,15 @@ RUN chmod -R a+rx /opt/miniconda
 # Install PyData modules and IPython dependencies
 RUN conda update --quiet --yes conda && \
     conda install --quiet --yes $PYDATAPKG \
-        pip sqlalchemy cython pyzmq \
+        pip sqlalchemy cython pyzmq statsmodels \
         theano tornado jinja2 sphinx pygments nose readline \
     && conda clean -y -t
+
+##########################
+# Update kernels
+WORKDIR /srv/ipykernel
+RUN pip install pip -U \
+    && rm -rf /usr/local/share/jupyter/kernels/* \
+    && pip2 install -r requirements.txt -e .
+    #&& pip3 install -r requirements.txt -e .
+RUN ipython kernelspec install-self
