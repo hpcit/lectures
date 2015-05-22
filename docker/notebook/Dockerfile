@@ -64,6 +64,9 @@ RUN ipython profile create
 ##########################
 # LIVE RELOAD MY SLIDES?
 WORKDIR /tmp
+# Does not work...
+RUN git clone https://github.com/damianavila/RISE.git
+RUN cd RISE && python2 setup.py install
 
 # ##########################
 # # Change keys and profiles
