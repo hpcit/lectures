@@ -9,5 +9,5 @@ git clone --branch=milano https://github.com/cineca-scai/lectures.git
 # Removing existing
 nohup sudo docker rm -f $(docker ps -aq -f name=notebook) 2> /dev/null
 # Launch the ipython jupyter server: a new container
-echo "Launch a new conainer"
+echo "Launch a new container for jupyter project"
 sudo docker run -d -p 80:8000 -v $HOME/lectures/pydata:/data --name notebook cineca/jupydatanb
