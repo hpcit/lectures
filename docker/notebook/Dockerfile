@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Paolo D. <p.donoriodemeo@cineca.it>
 
 ENV PYVERSION 2
-ENV PYDATAPKG numpy scipy pandas matplotlib seaborn bokeh scikit-learn
+ENV PYDATAPKG numpy scipy pandas matplotlib seaborn bokeh scikit-learn sympy
 
 ##########################
 # APT
@@ -25,6 +25,7 @@ RUN conda update --quiet --yes conda && \
     conda install --quiet --yes ipython $PYDATAPKG \
         six pip sqlalchemy cython pyzmq statsmodels \
         theano tornado jinja2 sphinx pygments nose readline \
+        openpyxl xlrd \
     && conda clean -y -t
 
 ##########################
