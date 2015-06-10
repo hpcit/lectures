@@ -1,21 +1,21 @@
 #!/bin/bash
 
-#clone forked repository specifying milano branch
-#clone -b milano https://github.com/luigi-calori/lectures.git lectures_milano
+#git clone forked repository specifying milano branch
+#git clone -b milano https://github.com/luigi-calori/lectures.git lectures_milano
 
 #set up username and mail
-#config --global user.name "luigi-calori"
-#config --global user.email "l.calori@cineca.it"
+#git config --global user.name "luigi-calori"
+#git config --global user.email "l.calori@cineca.it"
 
 #find where is the remote to push
-#remote show origin
+#git remote show origin
 
 #suppose we edited README, than status show but we have to add it
-#add README.md
-#commit -m " changed README "
+#git add README.md
+#git commit -m " changed README "
 
 #define upstream repo into local
-#remote add upstream https://github.com/cineca-scai/lectures.git
+#git remote add upstream https://github.com/cineca-scai/lectures.git
 
 #here are the step to keep it in sync with upstream
 git pull
