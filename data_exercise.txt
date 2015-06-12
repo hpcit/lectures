@@ -1,0 +1,48 @@
+
+
+
+
+
+######################### firts snip
+colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral','blue']
+shown=st[:len(colors)-1]
+others=st[len(colors)-1:]
+other_sum=others['core_hours'].sum()
+values=shown['core_hours'].values.tolist()+[other_sum]
+labels=shown.index.tolist()+['others']
+print labels
+print values
+
+######################### display plain snip
+plt.rcParams['figure.figsize'] = 5, 5
+
+plt.pie(values, labels=labels, colors=colors,
+        autopct='%1.1f%%', shadow=True, startangle=90)
+# Set aspect ratio to be equal so that pie is drawn as a circle.
+plt.axis('equal')
+
+plt.show()
+
+
+######################### display explode snip
+
+
+plt.rcParams['figure.figsize'] = 5, 5
+
+explode = [0] * (len(colors)-1) +[0.1]
+plt.pie(values, explode=explode, labels=labels, colors=colors,
+        autopct='%1.1f%%', shadow=True, startangle=90)
+# Set aspect ratio to be equal so that pie is drawn as a circle.
+plt.axis('equal')
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
