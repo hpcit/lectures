@@ -30,7 +30,7 @@ the official docker hub:
 # No persistent data
 $ docker run -d -p 80:8000 cineca/jupydatanb
 
-# OR using lectures (work in progress)
+# OR using lectures (RECOMMENDED)
 $ docker run -d -v $(pwd)/lectures/pydata:/data -p 80:8000 cineca/jupydatanb
 ```
 
