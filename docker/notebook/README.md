@@ -35,3 +35,13 @@ $ docker run -d -v $(pwd)/lectures/pydata:/data -p 80:8000 cineca/jupydatanb
 ```
 
 Then open with your browser: [http://localhost](http://localhost) and *enjoy*!
+
+## Use the image with both Python2 and R kernels
+
+The normal image is ~ 1.5 GB.
+The one with additional R core is ~ 2.5 GB.
+
+To run the most complete one:
+```
+$ docker run -d -v /your/path/to/nbs/files:/data -p 80:8000 cineca/jupydatar
+```
