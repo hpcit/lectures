@@ -3,12 +3,21 @@
 # CODE
 
  ☐ Docker images
-   ☐ test dataconda 3.5/3.4 + bokeh
-   ☐ install jinja2 and plumbum
-   ☐ import mylibs from irodsgraph
+   ✘ test dataconda 3.5/3.4 + bokeh @cancelled (15-09-16 10:33)
+   ✔ install jinja2 and plumbum @done (15-09-16 12:23)
+   ☐ import mylibs from irodsgraph: @buthow?
  ☐ Docker compose
    ☐ add hadoop link
    ☐ test mrjob
+
+--- ✄ -----------------------
+# NOTEBOOK
+
+ ☐ ipython exts
+   ☐ list
+     https://github.com/ipython/ipython/wiki/Extensions-Index
+   ☐ rmagic
+     http://rpy.sourceforge.net/rpy2/doc-2.4/html/interactive.html#module-rpy2.ipython.rmagic
 
 --- ✄ -----------------------
 # SLIDES

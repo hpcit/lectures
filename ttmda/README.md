@@ -24,7 +24,12 @@ pip install -U docker-compose
 ```
 $ git clone https://github.com/cineca-scai/lectures.git
 $ cd lectures && git checkout massive-analysis
-$ docker run -it -v $(pwd)/ttmda:/data -p 80:8888 pdonorio/py3mapreduce /opt/start
+
+$ docker run -it \
+    -v $(pwd)/ttmda:/data \
+    -v $(pwd)/ipython_extensions:/root/.ipython/extensions \
+    -p 80:8888 \
+    pdonorio/py3mapreduce /opt/start
 ```
 
 Then visit with your browser the jupyter running server at:

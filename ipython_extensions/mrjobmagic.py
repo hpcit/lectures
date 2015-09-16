@@ -3,10 +3,8 @@
 
 """ Do the magic with IPython """
 
+import plumbum
 from IPython.core.magic import register_cell_magic
-
-# // TO FIX:
-#   jinja2 template, plumbum: install and use
 
 JOBFILE = "./automatic_script.py"
 CONDA = "$CONDA_ACTIVATE"
@@ -55,9 +53,11 @@ def mapreduce(line, cell):
     Executes a MrJob run from a class definition
     """
     print("options", line.split())
-    # print("cell", cell)
-    mrjob = MrJobTemplate()
-    return mrjob.get_content() + cell
+    print("cell", cell)
+    return 2 * 3
+
+    # mrjob = MrJobTemplate()
+    # return mrjob.get_content() + cell
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """
