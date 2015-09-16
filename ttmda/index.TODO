@@ -4,13 +4,18 @@ Introduction:
  ☐ We do notebook: write live code in this slides
  ☐ What is Python + advantages
  ☐ Python interpreter + shell example
- ☐ Python 2 and Python 3
- ☐ Write code for 2 * 3 = six
+ ☐ Python 2 or Python 3
+   ☐ let's switch to python 3!
+   ☐ ...but write code for 2 * 3 = six
  ☐ Ipython shell
+   ☐ colors, output, history, bash commands
  ☐ Notebook and jupyter project
-   ☐ exercise
+ ☐ Use like an editor: use keys
+ ☐ Python introspection: everything is an object
+ ☐ Markdown and reference
+   ☐ exercise:  create a function that generates a random string of random size
  ☐ Ipython magic
-   ☐ exercise
+   ☐ exercise: write a bash file and execute it from within the ipython kernel
  ☐ Make the magic: Write extension
    ☐ exercise
  ☐ Slides and reveal

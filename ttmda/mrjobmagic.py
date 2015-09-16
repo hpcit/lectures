@@ -5,6 +5,9 @@
 
 from IPython.core.magic import register_cell_magic
 
+# // TO FIX:
+#   jinja2 template, plumbum: install and use
+
 JOBFILE = "./automatic_script.py"
 CONDA = "$CONDA_ACTIVATE"
 
