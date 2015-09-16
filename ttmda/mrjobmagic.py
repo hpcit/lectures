@@ -50,12 +50,6 @@ class MrJobTemplate(object):
 #     job.run()
 
 @register_cell_magic
-def mymagic(line, cell):
-    print("line", line)
-    print("cell", cell)
-    return True
-
-@register_cell_magic
 def mapreduce(line, cell):
     """
     Executes a MrJob run from a class definition
@@ -67,6 +61,4 @@ def mapreduce(line, cell):
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """
-
-    ipython.register_magic_function(mymagic, 'cell')
     ipython.register_magic_function(mapreduce, 'cell')

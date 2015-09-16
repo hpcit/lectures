@@ -1,4 +1,18 @@
 
+--- ✄ -----------------------
+# CODE
+
+ ☐ Docker images
+   ☐ test dataconda 3.5/3.4 + bokeh
+   ☐ install jinja2 and plumbum
+   ☐ import mylibs from irodsgraph
+ ☐ Docker compose
+   ☐ add hadoop link
+   ☐ test mrjob
+
+--- ✄ -----------------------
+# SLIDES
+
 Introduction:
 
  ☐ We do notebook: write live code in this slides
