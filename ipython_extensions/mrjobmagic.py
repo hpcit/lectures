@@ -3,7 +3,6 @@
 
 """ Do the magic with IPython """
 
-import plumbum
 from IPython.core.magic import register_cell_magic
 
 JOBFILE = "./automatic_script.py"
