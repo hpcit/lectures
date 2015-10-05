@@ -7,6 +7,35 @@
  ✔ Docker compose @done (15-09-30 12:54)
    ✔ add hadoop link @done (15-09-30 12:54)
  ✔ TEST HDFS @done (15-10-05 09:09) http://www.mccarroll.net/blog/pyspark/
+Note to my self:
+  mrjob hadoop runners https://pythonhosted.org/mrjob/runners-hadoop.html
+  is not intended to work on a remote hadoop cluster, as hadoop does not work like that
+  it seems that EMR use some @boto to make the magic
+  https://groups.google.com/forum/#!topic/mrjob/qJMRtoqv51o
+testing:
+ ✔ export HADOOP_HOME=$HADOOP_PREFIX @done (15-10-05 12:58)
+ ✔ /etc/bootstraph.sh? @done (15-10-05 12:58)
+ ✔ python automatic_script.py -r hadoop README.md @done (15-10-05 12:58)
+   ✔ works @done (15-10-05 12:58)
+ ☐ hdfs file??
+
+ ☐ mrjob bug hadoop.py
+ line 60:
+   HADOOP_VERSION_RE = re.compile(br'^.*?(?P<version>(\d|\.)+).*?$')
+   ☐ remove the b
+ line 215:
+   first_line = stdout.split('\n')[0]
+   ☐ add decode
+   first_line = stdout.decode().split('\n')[0]
+
+ ☐ move spark.yml into massive.yml
+ ☐ create mrjob dir and spark dir for notebooks
+
+
+
+
+
+ ☐ A second image with jupyter + hadoop... sigh
  ☐ Audience instructions
      ☐ bit.ly fixed link
    ☐ create script for linux machines
@@ -47,7 +76,13 @@ FOR THE FUTURE
 --- ✄ -----------------------
 # SLIDES
 
+HADOOP:
+   ☐ not SPARK
+   ☐ not remote (but you may use EMR on Amazon)
+   ☐ a different docker image
+
 ORI - Workshop tools for massive data analysis:
+
  ☐ Docker compose notebook + Hadoop
  ☐ Docker lightweight virtualization
  ☐ Write code for both py3 and py2

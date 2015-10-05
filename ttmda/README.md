@@ -42,21 +42,33 @@ $ cd lectures && git checkout massive-analysis
 
 # Download docker images (warning: size ~ 5GB)
 $ docker-compose -f containers/spark.yml pull
-
-# Bring up the Spark cluster and the Jupyter notebook server
-$ docker-compose -f containers/spark.yml up
 ```
 
-Then visit with your browser the jupyter running server at:
+Once you have directories and tools ready,
+you can use docker compose to launch one of the available configurations.
+
+### Configuration A: Jupyter, Hadoop and Mrjob
+
+```
+# Launch the notebook
+docker-compose -f containers/spark.yml up hadoopclient
+# Launch Hadoop cluster
+docker exec -it containers_hadoopclient_1 /etc/bootstrap.sh
+```
+
+### Configuration B: Jupyter, Hadoop and Mrjob
+
+```
+# Bring up the Spark cluster and the Jupyter notebook server
+$ docker-compose -f containers/spark.yml up sparkclient
+```
+
+### Access the web jupyter notebooks pages
+
+Visit with your browser the jupyter running server at:
 
 [http://localhost](http://localhost).
 
 <small>Note: if you use docker on Mac or Windows, instead of *localhost* you
 should find the virtual machine IP where Docker is running.
 This is usually possible with commands like `boot2docker ip` or `docker-machine ip`.</small>
-
-## How to test only the notebook server
-
-```
-docker-compose -f containers/spark.yml up --no-deps client
-```

@@ -55,13 +55,14 @@ worker:
         - 8081:8081
 
 ####################################################
+# Clients
 #https://hub.docker.com/r/jupyter/pyspark-notebook/
-client:
+sparkclient:
     image: cineca/sparknotebook
     hostname: ipyspark
     environment:
         MASTER: spark://master:7077
-        PASSWORD: cinecacourse
+        #PASSWORD: cinecacourse
         # USE_HTTPS: yes
     ports:
         - 80:8888
@@ -69,5 +70,14 @@ client:
         - master
     volumes:
         - ../data:/data/sparkdata
+        - ../ttmda:/data
+
+hadoopclient:
+    image: cineca/hadoopnotebook
+    hostname: ipyhadoop
+    ports:
+        - 80:8888
+    volumes:
+        #- ../data:/data/sparkdata
         - ../ttmda:/data
         - ../ipython_extensions:/home/jovyan/.ipython/extensions:ro
