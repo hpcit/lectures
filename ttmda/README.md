@@ -49,7 +49,7 @@ to help you get to this point.
 You can use it with the single command:
 
 ```
-wget -qO- https://raw.githubusercontent.com/cineca-scai/lectures/massive-analysis/containers/unix_install.sh | sh
+wget -qO- http://j.mp/massive_unixinstall | sh
 ```
 
 Once you have directories and tools ready,

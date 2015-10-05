@@ -15,6 +15,8 @@ echo "Checking pre-requisites"
 out=`git --version 2>&1`
 if [ $? -ne 0 ]; then
     echo "Missing git"
+    echo "To install it, please read:"
+    echo "https://git-scm.com/book/en/v1/Getting-Started-Installing-Git"
     exit 1
 else
     echo "Found: $out"
@@ -24,6 +26,8 @@ fi
 out=`docker --version 2>&1`
 if [ $? -ne 0 ]; then
     echo "Missing docker"
+    echo "To install it, please read:"
+    echo "https://docs.docker.com/installation/"
     exit 1
 else
     echo "Found: $out"
@@ -33,6 +37,10 @@ fi
 out=`docker-compose --version 2>&1`
 if [ $? -ne 0 ]; then
     echo "Missing docker compose"
+    echo "If you have python and 'pip' packager, you can:"
+    echo "$ pip install docker-compose"
+    echo "Otherwise read here:"
+    echo "https://docs.docker.com/compose/install/"
     exit 1
 else
     echo "Found: $out"
