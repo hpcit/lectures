@@ -44,6 +44,14 @@ $ cd lectures && git checkout massive-analysis
 $ docker-compose -f containers/massive.yml pull
 ```
 
+There is also a script available for `UNIX`,
+to help you get to this point.
+You can use it with the single command:
+
+```
+wget -qO- https://raw.githubusercontent.com/cineca-scai/lectures/massive-analysis/containers/unix_install.sh | sh
+```
+
 Once you have directories and tools ready,
 you can use docker compose to launch one of the available configurations.
 
