@@ -40,7 +40,7 @@ $ git clone https://github.com/cineca-scai/lectures.git
 # Use the branch for this specific lecture
 $ cd lectures && git checkout massive-analysis
 
-# Download docker images (warning: size ~ 5GB)
+# Download docker images (warning: size ~ 8GB)
 $ docker-compose -f containers/spark.yml pull
 ```
 

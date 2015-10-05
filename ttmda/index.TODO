@@ -17,23 +17,12 @@ testing:
  ✔ /etc/bootstraph.sh? @done (15-10-05 12:58)
  ✔ python automatic_script.py -r hadoop README.md @done (15-10-05 12:58)
    ✔ works @done (15-10-05 12:58)
- ☐ hdfs file??
-
- ☐ mrjob bug hadoop.py
- line 60:
-   HADOOP_VERSION_RE = re.compile(br'^.*?(?P<version>(\d|\.)+).*?$')
-   ☐ remove the b
- line 215:
-   first_line = stdout.split('\n')[0]
-   ☐ add decode
-   first_line = stdout.decode().split('\n')[0]
+ ✘ mrjob bug hadoop.py @cancelled (15-10-05 14:00)
+   ☐ https://github.com/Yelp/mrjob/issues/1142
+   ☐ fork the project to have a temporary solution?
 
  ☐ move spark.yml into massive.yml
  ☐ create mrjob dir and spark dir for notebooks
-
-
-
-
 
  ☐ A second image with jupyter + hadoop... sigh
  ☐ Audience instructions
@@ -80,6 +69,8 @@ HADOOP:
    ☐ not SPARK
    ☐ not remote (but you may use EMR on Amazon)
    ☐ a different docker image
+   ☐ how to run directly with HDFS (avoiding mrjob to copy)
+   ☐ commands to clean containers
 
 ORI - Workshop tools for massive data analysis:
 
