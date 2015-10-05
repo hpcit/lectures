@@ -12,14 +12,14 @@ sparker:
         SPARK_WORKER_CORES: 2
         SPARK_WORKER_MEMORY: 1g
 
-###############################################
-# Data container
-# Let you share data easily between containers
-# (client and worker)
-data:
-    image: busybox
-    volumes:
-        - ../data:/data
+# ###############################################
+# # Data container
+# # Let you share data easily between containers
+# # (client and worker)
+# data:
+#     image: busybox
+#     volumes:
+#         - ../data:/data
 
 ###############################################
 # Hadoop and Spark services MASTER
@@ -43,8 +43,9 @@ worker:
     hostname: worker
     command: /bootslave.sh
     # will work with dockercompose1.5: command: "$${BSWORKER}"
-    volumes_from:
-        - data
+    volumes:
+    #volumes_from:
+        - ../data:/data
     links:
         - master
     # worker webui
@@ -66,8 +67,7 @@ client:
         - 80:8888
     links:
         - master
-    # volumes_from:
-    #     - data
     volumes:
+        - ../data:/data/sparkdata
         - ../ttmda:/data
         - ../ipython_extensions:/home/jovyan/.ipython/extensions:ro
