@@ -17,24 +17,25 @@ testing:
  ✔ /etc/bootstraph.sh? @done (15-10-05 12:58)
  ✔ python automatic_script.py -r hadoop README.md @done (15-10-05 12:58)
    ✔ works @done (15-10-05 12:58)
- ✘ mrjob bug hadoop.py @cancelled (15-10-05 14:00)
-   https://github.com/Yelp/mrjob/issues/1142
-   ☐ fork the project to have a temporary solution?
  ✔ A second image with jupyter + hadoop... sigh @done (15-10-05 15:58)
  ✔ move spark.yml into massive.yml @done (15-10-05 16:01)
- ☐ create mrjob dir and spark dir for notebooks
-   ☐ create script for linux machines
-     ☐ test it
-     ☐ send Cremonesi
+ ✔ create mrjob dir and spark dir for notebooks @done (15-10-05 16:06)
  ✔ Code tests @done (15-10-01 23:18)
    ✔ HDFS @done (15-10-01 23:18)
  ✔ Docker images @done (15-10-01 23:18)
    ✘ test dataconda 3.5/3.4 + bokeh @cancelled (15-09-16 10:33)
    ✔ install jinja2 and plumbum + mrjob @done (15-10-01 23:18)
+ ☐ create script for linux machines
+   ☐ test it
+   ☐ send Cremonesi
+ ☐ Work the code
    ☐ howdoi
    ☐ import mylibs from irodsgraph: @buthow?
      ☐ svn? or git clone?
      ☐ put them all (mylibs) into /root/.ipython ! (it works)
+   ✘ mrjob bug hadoop.py @cancelled (15-10-05 14:00)
+     https://github.com/Yelp/mrjob/issues/1142
+     ☐ fork the project to have a temporary solution?
    ☐ mrjob runners
      http://mrjob.readthedocs.org/en/latest/guides/runners.html
 
@@ -70,6 +71,7 @@ HADOOP:
    ☐ how to run directly with HDFS (avoiding mrjob to copy)
    ☐ Schemas compairing hadoop one container and spark many containers
    ☐ commands to clean containers
+   docker stats (docker ps | grep containers_ | awk '{print $NF}')
 
 ORI - Workshop tools for massive data analysis:
 
@@ -107,4 +109,5 @@ Introduction:
    ☐ exercise
  ☐ Securing the notebook via docker compose (environment PASSWORD)
 
-
+--- ✄ -----------------------
+# COMPLETED
