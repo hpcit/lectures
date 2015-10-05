@@ -1,0 +1,73 @@
+
+###############################################
+# SPARK standalone cluster
+# this is a service that will be extended by master and worker
+sparker:
+    image: cineca/sparkcluster
+    command: echo
+    # Based on documentation found in:
+    # https://spark.apache.org/docs/latest/spark-standalone.html
+    environment:
+        SPARK_MASTER_HOST: master
+        SPARK_WORKER_CORES: 2
+        SPARK_WORKER_MEMORY: 1g
+
+###############################################
+# Data container
+# Let you share data easily between containers
+# (client and worker)
+data:
+    image: busybox
+    volumes:
+        - ../data:/data
+
+###############################################
+# Hadoop and Spark services MASTER
+master:
+    extends:
+        service: sparker
+    hostname: master
+    command: /bootmaster.sh
+    # Let other containers slave reach the hadoop master:
+    expose:
+        - 7077
+    # master webui
+    ports:
+        - 8080:8080
+
+###############################################
+# Do the hard work from master requests
+worker:
+    extends:
+        service: sparker
+    hostname: worker
+    command: /bootslave.sh
+    # will work with dockercompose1.5: command: "$${BSWORKER}"
+    volumes_from:
+        - data
+    links:
+        - master
+    # worker webui
+    environment:
+        SPARK_WORKER_WEBUI_PORT: 8081
+    ports:
+        - 8081:8081
+
+####################################################
+#https://hub.docker.com/r/jupyter/pyspark-notebook/
+client:
+    image: cineca/sparknotebook
+    hostname: ipyspark
+    environment:
+        MASTER: spark://master:7077
+        PASSWORD: cinecacourse
+        # USE_HTTPS: yes
+    ports:
+        - 80:8888
+    links:
+        - master
+    # volumes_from:
+    #     - data
+    volumes:
+        - ../ttmda:/data
+        - ../ipython_extensions:/home/jovyan/.ipython/extensions:ro

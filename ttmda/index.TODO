@@ -1,14 +1,38 @@
 
+=== TOOLS FOR MASSIVE DATA ANALYTICS ===
+
 --- ✄ -----------------------
 # CODE
 
- ☐ Docker images
+ ✔ Docker compose @done (15-09-30 12:54)
+   ✔ add hadoop link @done (15-09-30 12:54)
+ ✔ TEST HDFS @done (15-10-05 09:09) http://www.mccarroll.net/blog/pyspark/
+ ☐ Audience instructions
+     ☐ bit.ly fixed link
+   ☐ create script for linux machines
+     ☐ test it
+     ☐ send Cremonesi
+ ✔ Code tests @done (15-10-01 23:18)
+   ✔ HDFS @done (15-10-01 23:18)
+ ✔ Docker images @done (15-10-01 23:18)
    ✘ test dataconda 3.5/3.4 + bokeh @cancelled (15-09-16 10:33)
-   ✔ install jinja2 and plumbum @done (15-09-16 12:23)
+   ✔ install jinja2 and plumbum + mrjob @done (15-10-01 23:18)
+   ☐ howdoi
    ☐ import mylibs from irodsgraph: @buthow?
- ☐ Docker compose
-   ☐ add hadoop link
-   ☐ test mrjob
+     ☐ svn? or git clone?
+     ☐ put them all (mylibs) into /root/.ipython ! (it works)
+
+☐ Give chance to transform GIT into Interactive
+  http://mybinder.org/
+
+ ☐ Do jobs
+  https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
+  https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
+
+FOR THE FUTURE
+ ☐ Should we also split namenode and datanode?
+   ☐ no secondary
+   ☐ 2 datanode (with scale?)
 
 --- ✄ -----------------------
 # NOTEBOOK
@@ -23,6 +47,17 @@
 --- ✄ -----------------------
 # SLIDES
 
+ORI - Workshop tools for massive data analysis:
+ ☐ Docker compose notebook + Hadoop
+ ☐ Docker lightweight virtualization
+ ☐ Write code for both py3 and py2
+ ☐ Armin and projects and compat
+ ☐ List differences and solutions with six
+ ☐ Ask python if you don't know
+ ☐ Howdoi example with py3 dictionaries loop
+ ☐ Py3 image + mrjob + howdoi
+
+
 Introduction:
 
  ☐ We do notebook: write live code in this slides
@@ -31,6 +66,7 @@ Introduction:
  ☐ Python 2 or Python 3
    ☐ let's switch to python 3!
    ☐ ...but write code for 2 * 3 = six
+   ☐ from __future__ import braces
  ☐ Ipython shell
    ☐ colors, output, history, bash commands
  ☐ Notebook and jupyter project
