@@ -41,7 +41,7 @@ $ git clone https://github.com/cineca-scai/lectures.git
 $ cd lectures && git checkout massive-analysis
 
 # Download docker images (warning: size ~ 8GB)
-$ docker-compose -f containers/spark.yml pull
+$ docker-compose -f containers/massive.yml pull
 ```
 
 Once you have directories and tools ready,
@@ -51,7 +51,7 @@ you can use docker compose to launch one of the available configurations.
 
 ```
 # Launch the notebook
-docker-compose -f containers/spark.yml up hadoopclient
+docker-compose -f containers/massive.yml up hadoopclient
 # Launch Hadoop cluster
 docker exec -it containers_hadoopclient_1 /etc/bootstrap.sh
 ```
@@ -60,7 +60,7 @@ docker exec -it containers_hadoopclient_1 /etc/bootstrap.sh
 
 ```
 # Bring up the Spark cluster and the Jupyter notebook server
-$ docker-compose -f containers/spark.yml up sparkclient
+$ docker-compose -f containers/massive.yml up sparkclient
 ```
 
 ### Access the web jupyter notebooks pages

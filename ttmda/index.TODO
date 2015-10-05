@@ -18,15 +18,11 @@ testing:
  ✔ python automatic_script.py -r hadoop README.md @done (15-10-05 12:58)
    ✔ works @done (15-10-05 12:58)
  ✘ mrjob bug hadoop.py @cancelled (15-10-05 14:00)
-   ☐ https://github.com/Yelp/mrjob/issues/1142
+   https://github.com/Yelp/mrjob/issues/1142
    ☐ fork the project to have a temporary solution?
-
- ☐ move spark.yml into massive.yml
+ ✔ A second image with jupyter + hadoop... sigh @done (15-10-05 15:58)
+ ✔ move spark.yml into massive.yml @done (15-10-05 16:01)
  ☐ create mrjob dir and spark dir for notebooks
-
- ☐ A second image with jupyter + hadoop... sigh
- ☐ Audience instructions
-     ☐ bit.ly fixed link
    ☐ create script for linux machines
      ☐ test it
      ☐ send Cremonesi
@@ -39,6 +35,8 @@ testing:
    ☐ import mylibs from irodsgraph: @buthow?
      ☐ svn? or git clone?
      ☐ put them all (mylibs) into /root/.ipython ! (it works)
+   ☐ mrjob runners
+     http://mrjob.readthedocs.org/en/latest/guides/runners.html
 
 ☐ Give chance to transform GIT into Interactive
   http://mybinder.org/
@@ -70,6 +68,7 @@ HADOOP:
    ☐ not remote (but you may use EMR on Amazon)
    ☐ a different docker image
    ☐ how to run directly with HDFS (avoiding mrjob to copy)
+   ☐ Schemas compairing hadoop one container and spark many containers
    ☐ commands to clean containers
 
 ORI - Workshop tools for massive data analysis:
@@ -106,4 +105,6 @@ Introduction:
    ☐ exercise
  ☐ Slides and reveal
    ☐ exercise
+ ☐ Securing the notebook via docker compose (environment PASSWORD)
+
 
