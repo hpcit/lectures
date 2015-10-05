@@ -52,7 +52,7 @@ echo -e "Good to go. Let's install! Target directory:\n$dir\n"
 sleep 1
 
 if [ -d "$dir" ]; then
-    echo "[skipping clone] Project (or directory) already exists"
+    echo "[skipping clone] Project or directory already exists"
 else
     git clone $git_url $dir
 fi
