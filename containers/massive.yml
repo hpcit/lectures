@@ -1,0 +1,80 @@
+
+###############################################
+# SPARK standalone cluster
+# this is a service that will be extended by master and worker
+sparker:
+    image: cineca/sparkcluster
+    command: echo
+    # Based on documentation found in:
+    # https://spark.apache.org/docs/latest/spark-standalone.html
+    environment:
+        SPARK_MASTER_HOST: master
+        SPARK_WORKER_CORES: 2
+        SPARK_WORKER_MEMORY: 1g
+
+###############################################
+# Data container
+# Let you share data easily between containers
+# (client and worker)
+sparkdata:
+    image: busybox
+    volumes:
+        - ../data:/data/worker
+
+###############################################
+# Hadoop and Spark services MASTER
+master:
+    extends:
+        service: sparker
+    hostname: master
+    command: /bootmaster.sh
+    expose:
+        - 7077 # Let other containers slave reach the hadoop master
+    # master webui
+    ports:
+        - 8080:8080
+
+###############################################
+# Do the hard work from master requests
+worker:
+    extends:
+        service: sparker
+    hostname: worker
+    command: /bootslave.sh
+    volumes_from:
+        - sparkdata
+    links:
+        - master
+    environment:
+        SPARK_WORKER_WEBUI_PORT: 8081 # worker webui
+    ports:
+        - 8081:8081
+
+####################################################
+# Clients
+sparkclient:
+    image: cineca/sparknotebook
+    hostname: ipyspark
+    environment:
+        # Other options: https://hub.docker.com/r/jupyter/pyspark-notebook
+        MASTER: spark://master:7077
+        #PASSWORD: cinecacourse
+    ports:
+        - 80:8888
+    links:
+        - master
+        - worker
+    volumes_from:
+        - sparkdata
+    volumes:
+        - ../data:/data/worker
+        - ../ttmda/spark:/data
+
+hadoopclient:
+    image: cineca/hadoopnotebook
+    hostname: ipyhadoop
+    ports:
+        - 80:8888
+    volumes:
+        - ../ttmda/hadoop:/data
+        - ../ipython_extensions:/root/.ipython/extensions:ro

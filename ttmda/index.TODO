@@ -1,0 +1,113 @@
+
+=== TOOLS FOR MASSIVE DATA ANALYTICS ===
+
+--- ✄ -----------------------
+# CODE
+
+ ✔ Docker compose @done (15-09-30 12:54)
+   ✔ add hadoop link @done (15-09-30 12:54)
+ ✔ TEST HDFS @done (15-10-05 09:09) http://www.mccarroll.net/blog/pyspark/
+Note to my self:
+  mrjob hadoop runners https://pythonhosted.org/mrjob/runners-hadoop.html
+  is not intended to work on a remote hadoop cluster, as hadoop does not work like that
+  it seems that EMR use some @boto to make the magic
+  https://groups.google.com/forum/#!topic/mrjob/qJMRtoqv51o
+testing:
+ ✔ export HADOOP_HOME=$HADOOP_PREFIX @done (15-10-05 12:58)
+ ✔ /etc/bootstraph.sh? @done (15-10-05 12:58)
+ ✔ python automatic_script.py -r hadoop README.md @done (15-10-05 12:58)
+   ✔ works @done (15-10-05 12:58)
+ ✔ A second image with jupyter + hadoop... sigh @done (15-10-05 15:58)
+ ✔ move spark.yml into massive.yml @done (15-10-05 16:01)
+ ✔ create mrjob dir and spark dir for notebooks @done (15-10-05 16:06)
+ ✔ Code tests @done (15-10-01 23:18)
+   ✔ HDFS @done (15-10-01 23:18)
+ ✔ Docker images @done (15-10-01 23:18)
+   ✘ test dataconda 3.5/3.4 + bokeh @cancelled (15-09-16 10:33)
+   ✔ install jinja2 and plumbum + mrjob @done (15-10-01 23:18)
+ ☐ create script for linux machines
+   ☐ test it
+   ☐ send Cremonesi
+ ☐ Work the code
+   ☐ howdoi
+   ☐ import mylibs from irodsgraph: @buthow?
+     ☐ svn? or git clone?
+     ☐ put them all (mylibs) into /root/.ipython ! (it works)
+   ✘ mrjob bug hadoop.py @cancelled (15-10-05 14:00)
+     https://github.com/Yelp/mrjob/issues/1142
+     ☐ fork the project to have a temporary solution?
+   ☐ mrjob runners
+     http://mrjob.readthedocs.org/en/latest/guides/runners.html
+
+☐ Give chance to transform GIT into Interactive
+  http://mybinder.org/
+
+ ☐ Do jobs
+  https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
+  https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
+
+FOR THE FUTURE
+ ☐ Should we also split namenode and datanode?
+   ☐ no secondary
+   ☐ 2 datanode (with scale?)
+
+--- ✄ -----------------------
+# NOTEBOOK
+
+ ☐ ipython exts
+   ✔ version information @done (15-09-16 12:47)
+   ☐ list
+     https://github.com/ipython/ipython/wiki/Extensions-Index
+   ☐ rmagic
+     http://rpy.sourceforge.net/rpy2/doc-2.4/html/interactive.html#module-rpy2.ipython.rmagic
+
+--- ✄ -----------------------
+# SLIDES
+
+HADOOP:
+   ☐ not SPARK
+   ☐ not remote (but you may use EMR on Amazon)
+   ☐ a different docker image
+   ☐ how to run directly with HDFS (avoiding mrjob to copy)
+   ☐ Schemas compairing hadoop one container and spark many containers
+   ☐ commands to clean containers
+   docker stats (docker ps | grep containers_ | awk '{print $NF}')
+
+ORI - Workshop tools for massive data analysis:
+
+ ☐ Docker compose notebook + Hadoop
+ ☐ Docker lightweight virtualization
+ ☐ Write code for both py3 and py2
+ ☐ Armin and projects and compat
+ ☐ List differences and solutions with six
+ ☐ Ask python if you don't know
+ ☐ Howdoi example with py3 dictionaries loop
+ ☐ Py3 image + mrjob + howdoi
+
+
+Introduction:
+
+ ☐ We do notebook: write live code in this slides
+ ☐ What is Python + advantages
+ ☐ Python interpreter + shell example
+ ☐ Python 2 or Python 3
+   ☐ let's switch to python 3!
+   ☐ ...but write code for 2 * 3 = six
+   ☐ from __future__ import braces
+ ☐ Ipython shell
+   ☐ colors, output, history, bash commands
+ ☐ Notebook and jupyter project
+ ☐ Use like an editor: use keys
+ ☐ Python introspection: everything is an object
+ ☐ Markdown and reference
+   ☐ exercise:  create a function that generates a random string of random size
+ ☐ Ipython magic
+   ☐ exercise: write a bash file and execute it from within the ipython kernel
+ ☐ Make the magic: Write extension
+   ☐ exercise
+ ☐ Slides and reveal
+   ☐ exercise
+ ☐ Securing the notebook via docker compose (environment PASSWORD)
+
+--- ✄ -----------------------
+# COMPLETED

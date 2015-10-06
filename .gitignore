@@ -5,6 +5,8 @@
 .ipynb*
 
 # Tests
+automatic*.py
+script_*.py
 mytest*
 
 # Byte-compiled / optimized / DLL files

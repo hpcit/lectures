@@ -1,4 +1,7 @@
 """
+
+Source: https://github.com/jrjohansson/version_information
+
 An IPython extension that provides a magic command that displays
 a table with information about versions of installed modules.
 
