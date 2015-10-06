@@ -60,6 +60,9 @@ fi
 ##################################
 # Using the massive branch and update
 cd $dir
+echo "Making the repo up-to-date"
+git fetch
+git remote update origin --prune
 git checkout $branch
 git pull
 
