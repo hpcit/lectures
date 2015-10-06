@@ -58,9 +58,10 @@ else
 fi
 
 ##################################
-# Using the massive branch
+# Using the massive branch and update
 cd $dir
 git checkout $branch
+git pull
 
 ##################################
 # Downloading images
