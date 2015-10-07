@@ -1,13 +1,10 @@
 
 # Tools and techniques for *massive* data analysis
 
-This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-2015).
+This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-2015); last course was held [in Milano, Italy]
+(http://hpc-forge.cineca.it/files/CoursesDev/public/2015/Tools_Techniques_Data_Analysis/). You may read [the official page of this course](http://www.hpc.cineca.it/content/tools-and-techniques-massive-data-analysis) to subscribe for the next one.
 
-You can read [the official page of this course](http://www.hpc.cineca.it/content/tools-and-techniques-massive-data-analysis).
-
-Other material is also available [here](https://hpc-forge.cineca.it/files/CoursesDev/public/2015/Tools_Techniques_Data_Analysis/).
-
-A read-only notebooks version can be viewed with [nbviewer](http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/massive-analysis/ttmda) free service.
+A read-only version of our notebooks can be accessed with [nbviewer](http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/massive-analysis/ttmda) free service reading the GitHub repository.
 
 ## Prerequisites
 
