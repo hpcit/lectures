@@ -3,31 +3,10 @@
 
 --- ✄ -----------------------
 # CODE
-
- ✔ Docker compose @done (15-09-30 12:54)
-   ✔ add hadoop link @done (15-09-30 12:54)
- ✔ TEST HDFS @done (15-10-05 09:09) http://www.mccarroll.net/blog/pyspark/
-Note to my self:
-  mrjob hadoop runners https://pythonhosted.org/mrjob/runners-hadoop.html
-  is not intended to work on a remote hadoop cluster, as hadoop does not work like that
-  it seems that EMR use some @boto to make the magic
-  https://groups.google.com/forum/#!topic/mrjob/qJMRtoqv51o
-testing:
- ✔ export HADOOP_HOME=$HADOOP_PREFIX @done (15-10-05 12:58)
- ✔ /etc/bootstraph.sh? @done (15-10-05 12:58)
- ✔ python automatic_script.py -r hadoop README.md @done (15-10-05 12:58)
-   ✔ works @done (15-10-05 12:58)
- ✔ A second image with jupyter + hadoop... sigh @done (15-10-05 15:58)
- ✔ move spark.yml into massive.yml @done (15-10-05 16:01)
- ✔ create mrjob dir and spark dir for notebooks @done (15-10-05 16:06)
- ✔ Code tests @done (15-10-01 23:18)
-   ✔ HDFS @done (15-10-01 23:18)
- ✔ Docker images @done (15-10-01 23:18)
-   ✘ test dataconda 3.5/3.4 + bokeh @cancelled (15-09-16 10:33)
-   ✔ install jinja2 and plumbum + mrjob @done (15-10-01 23:18)
- ☐ create script for linux machines
-   ☐ test it
-   ☐ send Cremonesi
+ ✔ create script for linux machines @done (15-10-06 10:50)
+   ✔ test it @done (15-10-06 10:51)
+   ✔ send @done (15-10-06 10:51)
+ ☐ Audience download
  ☐ Work the code
    ☐ howdoi
    ☐ import mylibs from irodsgraph: @buthow?
@@ -111,3 +90,25 @@ Introduction:
 
 --- ✄ -----------------------
 # COMPLETED
+
+ ✔ Docker compose @done (15-09-30 12:54)
+   ✔ add hadoop link @done (15-09-30 12:54)
+ ✔ TEST HDFS @done (15-10-05 09:09) http://www.mccarroll.net/blog/pyspark/
+Note to my self:
+  mrjob hadoop runners https://pythonhosted.org/mrjob/runners-hadoop.html
+  is not intended to work on a remote hadoop cluster, as hadoop does not work like that
+  it seems that EMR use some @boto to make the magic
+  https://groups.google.com/forum/#!topic/mrjob/qJMRtoqv51o
+testing:
+ ✔ export HADOOP_HOME=$HADOOP_PREFIX @done (15-10-05 12:58)
+ ✔ /etc/bootstraph.sh? @done (15-10-05 12:58)
+ ✔ python automatic_script.py -r hadoop README.md @done (15-10-05 12:58)
+   ✔ works @done (15-10-05 12:58)
+ ✔ A second image with jupyter + hadoop... sigh @done (15-10-05 15:58)
+ ✔ move spark.yml into massive.yml @done (15-10-05 16:01)
+ ✔ create mrjob dir and spark dir for notebooks @done (15-10-05 16:06)
+ ✔ Code tests @done (15-10-01 23:18)
+   ✔ HDFS @done (15-10-01 23:18)
+ ✔ Docker images @done (15-10-01 23:18)
+   ✘ test dataconda 3.5/3.4 + bokeh @cancelled (15-09-16 10:33)
+   ✔ install jinja2 and plumbum + mrjob @done (15-10-01 23:18)
