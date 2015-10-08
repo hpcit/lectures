@@ -6,9 +6,8 @@
  ✔ create script for linux machines @done (15-10-06 10:50)
    ✔ test it @done (15-10-06 10:51)
    ✔ send @done (15-10-06 10:51)
- ☐ Audience download
- ☐ Work the code
-   ☐ howdoi
+ ✔ Audience download @done (15-10-08 15:46)
+ ✔ Work the code @done (15-10-08 15:46)
    ☐ import mylibs from irodsgraph: @buthow?
      ☐ svn? or git clone?
      ☐ put them all (mylibs) into /root/.ipython ! (it works)
@@ -42,16 +41,6 @@ FOR THE FUTURE
 
 --- ✄ -----------------------
 # SLIDES
-
-HADOOP:
-   ☐ not SPARK
-   ☐ not remote (but you may use EMR on Amazon)
-   ☐ a different docker image
-   ☐ how to run directly with HDFS (avoiding mrjob to copy)
-   ☐ Schemas compairing hadoop one container and spark many containers
-   ☐ commands to clean containers
-   docker stats (docker ps | grep containers_ | awk '{print $NF}')
-
 ORI - Workshop tools for massive data analysis:
 
  ☐ Docker compose notebook + Hadoop
@@ -73,6 +62,8 @@ Introduction:
    ☐ let's switch to python 3!
    ☐ ...but write code for 2 * 3 = six
    ☐ from __future__ import braces
+ ☐ modules and packaging
+   ☐ howdoi
  ☐ Ipython shell
    ☐ colors, output, history, bash commands
  ☐ Notebook and jupyter project
@@ -87,6 +78,18 @@ Introduction:
  ☐ Slides and reveal
    ☐ exercise
  ☐ Securing the notebook via docker compose (environment PASSWORD)
+
+HADOOP:
+   ☐ not SPARK
+   ☐ not remote (but you may use EMR on Amazon)
+   ☐ a different docker image
+   ☐ how to run directly with HDFS (avoiding mrjob to copy)
+   ☐ Schemas compairing hadoop one container and spark many containers
+   ☐ commands to clean containers
+   docker stats (docker ps | grep containers_ | awk '{print $NF}')
+
+ FINAL HELP:
+   like http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/milano/pydata/install/help.ipynb
 
 --- ✄ -----------------------
 # COMPLETED
