@@ -121,31 +121,42 @@ def mapreduce(line, cell=None):
     destination = 'inline'
     # Split options
     options = line.split()
+    noptions = len(options)
     #print(options)
 
     ########################
-    if len(options) < 1:
-        raise Exception("Provide at least one line option as Input File")
+    if noptions < 1:
+        print("Provide at least one line option as Input File")
+        exit(1)
     finput = options[0]
     print("Input file is %s" % finput)
 
     if cell is None:
         ########################
         ## LINE
-        print("Only line")
+        # options: LOCAL_INPUT MR_FILE [inline,hadoop]
+        print("File provided by user")
+        if noptions < 2:
+            print("Missing MrJob script file")
+            exit(1)
+        script = options[1]
+        if noptions == 3:
+            destination = options[2]
     else:
         ########################
         ## CELL
+        # options: LOCAL_INPUT [inline,hadoop]
         if len(options) > 1:
             destination = options[1]
         # Create file
         template = MrJobTemplate(cell)
         script = template.get_file()
-        # Command for MapReduce
-        args = ['python3', script, '-r', destination, finput]
-        # Execute the command
-        execute_ipython_cmd(args)
-        return script
+
+    # Command for MapReduce
+    args = ['python3', script, '-r', destination, finput]
+    # Execute the command
+    execute_ipython_cmd(args)
+    return script
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """
