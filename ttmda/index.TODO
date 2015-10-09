@@ -4,24 +4,6 @@
 --- ✄ -----------------------
 # CODE
 
- ✔ create script for linux machines @done (15-10-06 10:50)
-   ✔ test it @done (15-10-06 10:51)
-   ✔ send @done (15-10-06 10:51)
- ✔ Audience download @done (15-10-08 15:46)
- ✔ Work the code @done (15-10-08 15:46)
-   ☐ import mylibs from irodsgraph:
-     ☐ svn command on top of the head
-     ✔ put them all (mylibs) into /root/.ipython ! (it works) @done (15-10-09 14:36)
-   ✔ mrjob bug hadoop.py @done (15-10-09 14:36)
-     https://github.com/Yelp/mrjob/issues/1142
-     ✘ fork the project to have a temporary solution? @cancelled (15-10-09 14:36)
- ✔ ipython exts @done (15-10-09 14:39)
-   ✔ version information @done (15-09-16 12:47)
-   ✔ list @done (15-10-09 14:39)
-     https://github.com/ipython/ipython/wiki/Extensions-Index
-   ✘ rmagic @cancelled (15-10-09 14:37)
-     http://rpy.sourceforge.net/rpy2/doc-2.4/html/interactive.html#module-rpy2.ipython.rmagic
-
 ☐ mrjob runners
   http://mrjob.readthedocs.org/en/latest/guides/runners.html
 ☐ Give chance to transform GIT into Interactive
@@ -114,3 +96,20 @@ testing:
  ✔ Docker images @done (15-10-01 23:18)
    ✘ test dataconda 3.5/3.4 + bokeh @cancelled (15-09-16 10:33)
    ✔ install jinja2 and plumbum + mrjob @done (15-10-01 23:18)
+ ✔ create script for linux machines @done (15-10-06 10:50)
+   ✔ test it @done (15-10-06 10:51)
+   ✔ send @done (15-10-06 10:51)
+ ✔ Audience download @done (15-10-08 15:46)
+ ✔ Work the code @done (15-10-08 15:46)
+   ✔ import mylibs from irodsgraph: @done (15-10-09 15:14)
+     ✔ svn command on top of the head @done (15-10-09 15:14)
+     ✔ put them all (mylibs) into /root/.ipython ! (it works) @done (15-10-09 14:36)
+   ✔ mrjob bug hadoop.py @done (15-10-09 14:36)
+     https://github.com/Yelp/mrjob/issues/1142
+     ✘ fork the project to have a temporary solution? @cancelled (15-10-09 14:36)
+ ✔ ipython exts @done (15-10-09 14:39)
+   ✔ version information @done (15-09-16 12:47)
+   ✔ list @done (15-10-09 14:39)
+     https://github.com/ipython/ipython/wiki/Extensions-Index
+   ✘ rmagic @cancelled (15-10-09 14:37)
+     http://rpy.sourceforge.net/rpy2/doc-2.4/html/interactive.html#module-rpy2.ipython.rmagic

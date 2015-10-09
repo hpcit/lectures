@@ -5,7 +5,6 @@
 
 import os
 from IPython.core.magic import register_cell_magic
-from libs.bash import BashCommands
 
 JOBDIR = "jobs"
 JOBFILE = "script"
@@ -98,21 +97,32 @@ def mapreduce(line, cell):
     destination = 'inline'
     # Split options
     options = line.split()
-    print(options)
+    #print(options)
     if len(options) < 1:
         raise Exception("Provide at least one line option as Input File")
     finput = options[0]
+    print("Input file is %s" % finput)
     if 1 in options:
         destination = options[1]
     # Create file
     template = MrJobTemplate(cell)
     # Command for MapReduce
-    args = [template.get_file(), '-r', destination, finput]
-    # Class for shell commands
-    basher = BashCommands()
+    args = ['python3', template.get_file(), '-r', destination, finput]
     # Execute the command
-    basher.execute_command('python3', args)
-    return 42
+    cmd = " ".join(args)
+    return cmd
+    # print(cmd)
+
+    # from plumbum.cmd import python3
+    # out = python3(args)
+
+    # # from subprocess import call
+    # # out = call(args)
+
+    # # from bash import bash
+    # # out = bash(" ".join(args))
+
+    # return out
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """
