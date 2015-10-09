@@ -110,19 +110,22 @@ def mapreduce(line, cell):
     args = ['python3', template.get_file(), '-r', destination, finput]
     # Execute the command
     cmd = " ".join(args)
-    return cmd
-    # print(cmd)
+    print("Executing", cmd)
 
-    # from plumbum.cmd import python3
-    # out = python3(args)
+    ###################################
+    # The best way to call python inside an ipython extension
+    from IPython import get_ipython
+    ip = get_ipython()
+    # ip.ex('import os')
+    # ip.magic('%cd -b relfiles')
+    # ip.system('ls -F')
+    ###################################
 
-    # # from subprocess import call
-    # # out = call(args)
+# Note: save to output file
+# Note bis: get the output file
 
-    # # from bash import bash
-    # # out = bash(" ".join(args))
-
-    # return out
+    ip.system(cmd)
+    return "Done"
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """
