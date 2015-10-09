@@ -88,6 +88,22 @@ class MrJobTemplate(object):
         with open(self.filename, 'w') as out:
             out.write(self.content + '\n')
 
+def execute_ipython_cmd(args):
+    cmd = " ".join(args)
+    print("Executing", cmd)
+    ###################################
+    # The best way to call python inside an ipython extension
+    from IPython import get_ipython
+    ip = get_ipython()
+    # ip.ex('import os')
+    # ip.magic('%cd -b relfiles')
+    # ip.system('ls -F')
+    ###################################
+# Note: save to output file
+# Note bis: get the output file
+    ip.system(cmd)
+    return cmd
+
 @register_cell_magic
 def mapreduce(line, cell):
     """
@@ -102,30 +118,16 @@ def mapreduce(line, cell):
         raise Exception("Provide at least one line option as Input File")
     finput = options[0]
     print("Input file is %s" % finput)
-    if 1 in options:
+    if len(options) > 1:
         destination = options[1]
     # Create file
     template = MrJobTemplate(cell)
+    script = template.get_file()
     # Command for MapReduce
-    args = ['python3', template.get_file(), '-r', destination, finput]
+    args = ['python3', script, '-r', destination, finput]
     # Execute the command
-    cmd = " ".join(args)
-    print("Executing", cmd)
-
-    ###################################
-    # The best way to call python inside an ipython extension
-    from IPython import get_ipython
-    ip = get_ipython()
-    # ip.ex('import os')
-    # ip.magic('%cd -b relfiles')
-    # ip.system('ls -F')
-    ###################################
-
-# Note: save to output file
-# Note bis: get the output file
-
-    ip.system(cmd)
-    return "Done"
+    execute_ipython_cmd(args)
+    return script
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """

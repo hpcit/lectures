@@ -4,8 +4,15 @@
 --- ✄ -----------------------
 # CODE
 
-☐ mrjob runners
+✔ mrjob runners @done (15-10-09 17:07)
   http://mrjob.readthedocs.org/en/latest/guides/runners.html
+☐ DOCS
+%%mapreduce LOCAL_INPUT [inline,hadoop]
+MAPPER
+[COMBINER]
+REDUCER
+%mapreduce LOCAL_INPUT MR_FILE [inline,hadoop]
+
 ☐ Give chance to transform GIT into Interactive
   http://mybinder.org/
 ☐ Do jobs
@@ -43,13 +50,18 @@ Introduction:
  ☐ Python introspection: everything is an object
  ☐ Markdown and reference
    ☐ exercise:  create a function that generates a random string of random size
+
+Magic and extensions:
  ☐ Ipython magic
    ☐ exercise: write a bash file and execute it from within the ipython kernel
+ ☐ %magic is for line
  ☐ Make the magic: Write extension
    ☐ exercise
+ ☐ %%magic is for cell
  ☐ Slides and reveal
    ☐ exercise
- ☐ Securing the notebook via docker compose (environment PASSWORD)
+ ☐ Securing the notebook via docker compose
+   ☐ (environment PASSWORD) @tip
 
 HADOOP:
    ☐ not SPARK
