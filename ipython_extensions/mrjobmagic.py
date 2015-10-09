@@ -5,6 +5,7 @@
 
 import os
 from IPython.core.magic import register_cell_magic
+from libs.bash import BashCommands
 
 JOBDIR = "jobs"
 JOBFILE = "script"
@@ -79,6 +80,9 @@ class MrJobTemplate(object):
     def get_content(self):
         return self.content
 
+    def get_file(self):
+        return self.filename
+
     def write_job(self):
         if not os.path.exists(JOBDIR):
             os.makedirs(JOBDIR)
@@ -90,9 +94,25 @@ def mapreduce(line, cell):
     """
     Executes a MrJob run from a class definition
     """
-    print("options", line.split())
-    #print("cell", cell)
-    return MrJobTemplate(cell)
+
+    destination = 'inline'
+    # Split options
+    options = line.split()
+    print(options)
+    if len(options) < 1:
+        raise Exception("Provide at least one line option as Input File")
+    finput = options[0]
+    if 1 in options:
+        destination = options[1]
+    # Create file
+    template = MrJobTemplate(cell)
+    # Command for MapReduce
+    args = [template.get_file(), '-r', destination, finput]
+    # Class for shell commands
+    basher = BashCommands()
+    # Execute the command
+    basher.execute_command('python3', args)
+    return 42
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """

@@ -67,7 +67,6 @@ sparkclient:
     volumes_from:
         - sparkdata
     volumes:
-        - ../data:/data/worker
         - ../ttmda/spark:/data
 
 hadoopclient:
@@ -75,7 +74,10 @@ hadoopclient:
     hostname: ipyhadoop
     ports:
         - 80:8888
+    volumes_from:
+        - sparkdata
     volumes:
         - ../ttmda/hadoop:/data
         - ../ipython_extensions:/root/.ipython/extensions:ro
         #- ../ttmda/info:/data/jobs/info
+        #- ../pydata:/data/tmp
