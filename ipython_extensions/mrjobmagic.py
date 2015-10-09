@@ -126,8 +126,8 @@ def mapreduce(line, cell=None):
 
     ########################
     if noptions < 1:
-        print("Provide at least one line option as Input File")
-        exit(1)
+        print("ERROR: Provide at least one line option as Input File")
+        return
     finput = options[0]
     print("Input file is %s" % finput)
 
@@ -138,7 +138,7 @@ def mapreduce(line, cell=None):
         print("File provided by user")
         if noptions < 2:
             print("Missing MrJob script file")
-            exit(1)
+            return
         script = options[1]
         if noptions == 3:
             destination = options[2]

@@ -12,6 +12,8 @@
 ☐ Do jobs
   https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
   https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
+☐ Open port to check hadoop execution?
+ ☐ ipyhost... convert name or add host?
 
 --- ✄ -----------------------
 # SLIDES
