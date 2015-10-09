@@ -1,11 +1,17 @@
 #!/usr/bin/env ipython3
 # -*- coding: utf-8 -*-
 
-""" Do the magic with IPython """
+"""
+A custom magic command for executing MrJob jobs with Hadoop
+
+---
+
+Do the magic with IPython
+http://ipython.readthedocs.org/en/stable/config/custommagics.html#defining-magics
+"""
 
 import os
-from IPython.core.magic import register_cell_magic
-
+from IPython.core.magic import register_line_cell_magic
 JOBDIR = "jobs"
 JOBFILE = "script"
 
@@ -104,30 +110,42 @@ def execute_ipython_cmd(args):
     ip.system(cmd)
     return cmd
 
-@register_cell_magic
-def mapreduce(line, cell):
+@register_line_cell_magic
+def mapreduce(line, cell=None):
     """
     Executes a MrJob run from a class definition
     """
 
+    ########################
+    ## Conf
     destination = 'inline'
     # Split options
     options = line.split()
     #print(options)
+
+    ########################
     if len(options) < 1:
         raise Exception("Provide at least one line option as Input File")
     finput = options[0]
     print("Input file is %s" % finput)
-    if len(options) > 1:
-        destination = options[1]
-    # Create file
-    template = MrJobTemplate(cell)
-    script = template.get_file()
-    # Command for MapReduce
-    args = ['python3', script, '-r', destination, finput]
-    # Execute the command
-    execute_ipython_cmd(args)
-    return script
+
+    if cell is None:
+        ########################
+        ## LINE
+        print("Only line")
+    else:
+        ########################
+        ## CELL
+        if len(options) > 1:
+            destination = options[1]
+        # Create file
+        template = MrJobTemplate(cell)
+        script = template.get_file()
+        # Command for MapReduce
+        args = ['python3', script, '-r', destination, finput]
+        # Execute the command
+        execute_ipython_cmd(args)
+        return script
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """

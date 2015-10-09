@@ -6,13 +6,7 @@
 
 ✔ mrjob runners @done (15-10-09 17:07)
   http://mrjob.readthedocs.org/en/latest/guides/runners.html
-☐ DOCS
-%%mapreduce LOCAL_INPUT [inline,hadoop]
-MAPPER
-[COMBINER]
-REDUCER
-%mapreduce LOCAL_INPUT MR_FILE [inline,hadoop]
-
+✔ DOCS @done (15-10-09 17:49)
 ☐ Give chance to transform GIT into Interactive
   http://mybinder.org/
 ☐ Do jobs
