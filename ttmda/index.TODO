@@ -21,11 +21,11 @@ ORI - Workshop tools for massive data analysis:
 
  ✔ Docker compose notebook + Hadoop @done (15-10-09 14:33)
  ✔ Docker lightweight virtualization @done (15-10-09 14:33)
- ☐ Write code for both py3 and py2
- ☐ Armin and projects and compat
- ☐ List differences and solutions with six
- ☐ Ask python if you don't know
-   ☐ Howdoi example with py3 dictionaries loop
+ ✔ Write code for both py3 and py2 @done (15-10-10 13:30)
+ ☐ List differences and solutions
+   ☐ Armin and projects and compat
+ ✔ Ask python if you don't know @done (15-10-10 14:57)
+   ✔ Howdoi example with py3 dictionaries loop @done (15-10-10 14:57)
  ✔ Py2 image + mrjob + howdoi @done (15-10-09 14:35)
 
 Introduction:
