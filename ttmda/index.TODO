@@ -1,5 +1,6 @@
 
 === TOOLS FOR MASSIVE DATA ANALYTICS ===
+http://bit.ly/cineca_course_instructions
 
 --- ✄ -----------------------
 # CODE
@@ -20,22 +21,22 @@ mrjob runners
 
 Introduction:
 
- ☐ We do notebook: write live code in this slides
- ☐ What is Python + advantages
- ☐ Python interpreter + shell example
- ☐ Python 2 or Python 3
-   ☐ let's switch to python 3!
-   ☐ ...but write code for 2 * 3 = six
-   ☐ from __future__ import braces
- ☐ modules and packaging
-   ☐ howdoi
- ☐ Ipython shell
-   ☐ colors, output, history, bash commands
- ☐ Notebook and jupyter project
- ☐ Use like an editor: use keys
- ☐ Python introspection: everything is an object
- ☐ Markdown and reference
-   ☐ exercise:  create a function that generates a random string of random size
+ ✔ We do notebook: write live code in this slides @done (15-10-10 16:36)
+ ✔ What is Python + advantages @done (15-10-10 16:36)
+ ✔ Python interpreter + shell example @done (15-10-10 16:36)
+ ✔ Python 2 or Python 3 @done (15-10-10 16:36)
+   ✔ let's switch to python 3! @done (15-10-10 16:36)
+   ✔ ...but write code for 2 * 3 = six @done (15-10-10 16:36)
+   ✔ from __future__ import braces @done (15-10-10 16:36)
+ ✔ modules and packaging @done (15-10-10 16:40)
+   ✔ howdoi @done (15-10-10 16:40)
+ ✔ Ipython shell @done (15-10-10 16:40)
+   ✔ colors, output, history, bash commands @done (15-10-10 18:28)
+ ✔ Notebook and jupyter project @done (15-10-10 18:28)
+ ✔ Use like an editor: use keys @done (15-10-10 18:28)
+ ✔ Python introspection: everything is an object @done (15-10-10 18:32)
+   ✔ exercise:  create a function that generates a random string of random size @done (15-10-10 18:32)
+ ✘ Markdown and reference @cancelled (15-10-10 18:32)
 
 Magic and extensions:
  ☐ Ipython magic
