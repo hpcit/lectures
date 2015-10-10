@@ -3,40 +3,7 @@
 http://bit.ly/cineca_course_instructions
 
 --- ✄ -----------------------
-# CODE
-
-✔ DOCS @done (15-10-09 17:49)
-☐ Give chance to transform GIT into Interactive
-  http://mybinder.org/
-☐ Do jobs
-  https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
-  https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
-☐ Open port to check hadoop execution?
- ☐ ipyhost... convert name or add host?
-mrjob runners
-  http://mrjob.readthedocs.org/en/latest/guides/runners.html
-
---- ✄ -----------------------
 # SLIDES
-
-Introduction:
-
- ✔ We do notebook: write live code in this slides @done (15-10-10 16:36)
- ✔ What is Python + advantages @done (15-10-10 16:36)
- ✔ Python interpreter + shell example @done (15-10-10 16:36)
- ✔ Python 2 or Python 3 @done (15-10-10 16:36)
-   ✔ let's switch to python 3! @done (15-10-10 16:36)
-   ✔ ...but write code for 2 * 3 = six @done (15-10-10 16:36)
-   ✔ from __future__ import braces @done (15-10-10 16:36)
- ✔ modules and packaging @done (15-10-10 16:40)
-   ✔ howdoi @done (15-10-10 16:40)
- ✔ Ipython shell @done (15-10-10 16:40)
-   ✔ colors, output, history, bash commands @done (15-10-10 18:28)
- ✔ Notebook and jupyter project @done (15-10-10 18:28)
- ✔ Use like an editor: use keys @done (15-10-10 18:28)
- ✔ Python introspection: everything is an object @done (15-10-10 18:32)
-   ✔ exercise:  create a function that generates a random string of random size @done (15-10-10 18:32)
- ✘ Markdown and reference @cancelled (15-10-10 18:32)
 
 Magic and extensions:
  ☐ Ipython magic
@@ -61,6 +28,13 @@ HADOOP:
 
 MRJOB:
   https://github.com/Yelp/mrjob/issues/1142
+☐ Open port to check hadoop execution?
+ ☐ ipyhost... convert name or add host?
+☐ Do jobs
+    https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
+    https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
+☐ mrjob runners
+http://mrjob.readthedocs.org/en/latest/guides/runners.html
 
  FINAL HELP:
    like http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/milano/pydata/install/help.ipynb
@@ -70,6 +44,8 @@ FOR THE FUTURE
  ☐ Should we also split namenode and datanode?
    ☐ no secondary
    ☐ 2 datanode (with scale?)
+☐ Give chance to transform GIT into Interactive
+http://mybinder.org/
 
 --- ✄ -----------------------
 # COMPLETED
@@ -122,3 +98,22 @@ ORI - Workshop tools for massive data analysis:
  ✔ Ask python if you don't know @done (15-10-10 14:57)
    ✔ Howdoi example with py3 dictionaries loop @done (15-10-10 14:57)
  ✔ Py2 image + mrjob + howdoi @done (15-10-09 14:35)
+
+Introduction:
+
+ ✔ We do notebook: write live code in this slides @done (15-10-10 16:36)
+ ✔ What is Python + advantages @done (15-10-10 16:36)
+ ✔ Python interpreter + shell example @done (15-10-10 16:36)
+ ✔ Python 2 or Python 3 @done (15-10-10 16:36)
+   ✔ let's switch to python 3! @done (15-10-10 16:36)
+   ✔ ...but write code for 2 * 3 = six @done (15-10-10 16:36)
+   ✔ from __future__ import braces @done (15-10-10 16:36)
+ ✔ modules and packaging @done (15-10-10 16:40)
+   ✔ howdoi @done (15-10-10 16:40)
+ ✔ Ipython shell @done (15-10-10 16:40)
+   ✔ colors, output, history, bash commands @done (15-10-10 18:28)
+ ✔ Notebook and jupyter project @done (15-10-10 18:28)
+ ✔ Use like an editor: use keys @done (15-10-10 18:28)
+ ✔ Python introspection: everything is an object @done (15-10-10 18:32)
+   ✔ exercise:  create a function that generates a random string of random size @done (15-10-10 18:32)
+ ✘ Markdown and reference @cancelled (15-10-10 18:32)
