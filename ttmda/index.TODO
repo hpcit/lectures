@@ -4,8 +4,6 @@
 --- ✄ -----------------------
 # CODE
 
-✔ mrjob runners @done (15-10-09 17:07)
-  http://mrjob.readthedocs.org/en/latest/guides/runners.html
 ✔ DOCS @done (15-10-09 17:49)
 ☐ Give chance to transform GIT into Interactive
   http://mybinder.org/
@@ -14,19 +12,11 @@
   https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
 ☐ Open port to check hadoop execution?
  ☐ ipyhost... convert name or add host?
+mrjob runners
+  http://mrjob.readthedocs.org/en/latest/guides/runners.html
 
 --- ✄ -----------------------
 # SLIDES
-ORI - Workshop tools for massive data analysis:
-
- ✔ Docker compose notebook + Hadoop @done (15-10-09 14:33)
- ✔ Docker lightweight virtualization @done (15-10-09 14:33)
- ✔ Write code for both py3 and py2 @done (15-10-10 13:30)
- ☐ List differences and solutions
-   ☐ Armin and projects and compat
- ✔ Ask python if you don't know @done (15-10-10 14:57)
-   ✔ Howdoi example with py3 dictionaries loop @done (15-10-10 14:57)
- ✔ Py2 image + mrjob + howdoi @done (15-10-09 14:35)
 
 Introduction:
 
@@ -121,3 +111,13 @@ testing:
      https://github.com/ipython/ipython/wiki/Extensions-Index
    ✘ rmagic @cancelled (15-10-09 14:37)
      http://rpy.sourceforge.net/rpy2/doc-2.4/html/interactive.html#module-rpy2.ipython.rmagic
+ORI - Workshop tools for massive data analysis:
+
+ ✔ Docker compose notebook + Hadoop @done (15-10-09 14:33)
+ ✔ Docker lightweight virtualization @done (15-10-09 14:33)
+ ✔ Write code for both py3 and py2 @done (15-10-10 13:30)
+ ✔ List differences and solutions @done (15-10-10 16:11)
+   ✔ Armin and projects and compat @done (15-10-10 16:11)
+ ✔ Ask python if you don't know @done (15-10-10 14:57)
+   ✔ Howdoi example with py3 dictionaries loop @done (15-10-10 14:57)
+ ✔ Py2 image + mrjob + howdoi @done (15-10-09 14:35)
