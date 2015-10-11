@@ -6,14 +6,20 @@ http://bit.ly/cineca_course_instructions
 # SLIDES
 
 Magic and extensions:
- ☐ Ipython magic
-   ☐ exercise: write a bash file and execute it from within the ipython kernel
- ☐ %magic is for line
- ☐ Make the magic: Write extension
-   ☐ exercise
- ☐ %%magic is for cell
+ ✔ Ipython magic @done (15-10-11 12:46)
+   ✔ exercise: write a bash file and execute it from within the ipython kernel @done (15-10-11 12:58)
+ ✔ %magic is for line @done (15-10-11 13:03)
+   ✔ %%magic is for cell @done (15-10-11 13:03)
+ ✔ Make the magic: Write extension @done (15-10-11 13:22)
+   ✔ exercise, write line extension and test it via notebook @done (15-10-11 13:22)
  ☐ Slides and reveal
-   ☐ exercise
+   ☐ Markdown
+     ☐ little stylesheet
+     ☐ md2pdf
+     ☐ github markdown
+     ☐ documentation?
+   ☐ exercise, write a web page with notebooks: header, image, lorem and a piece of code
+
  ☐ Securing the notebook via docker compose
    ☐ (environment PASSWORD) @tip
 
@@ -38,6 +44,7 @@ http://mrjob.readthedocs.org/en/latest/guides/runners.html
 
  FINAL HELP:
    like http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/milano/pydata/install/help.ipynb
+   ☐ How to get ready for the other docker setup
 
 --- ✄ -----------------------
 FOR THE FUTURE
