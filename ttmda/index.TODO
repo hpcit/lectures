@@ -12,26 +12,24 @@ Magic and extensions:
    ✔ %%magic is for cell @done (15-10-11 13:03)
  ✔ Make the magic: Write extension @done (15-10-11 13:22)
    ✔ exercise, write line extension and test it via notebook @done (15-10-11 13:22)
+ ✔ Slides and reveal @done (15-10-11 17:01)
+   ✔ Markdown @done (15-10-11 17:01)
+     ✔ little stylesheet @done (15-10-11 17:01)
+     ✔ md2pdf @done (15-10-11 17:04)
+     ✔ github markdown @done (15-10-11 17:04)
+     ✔ documentation? @done (15-10-11 17:09)
+   ✔ exercise, write a web page with notebooks: header, image, lorem and a piece of code @done (15-10-11 17:12)
  ☐ Execises solutions
- ☐ Slides and reveal
-   ☐ Markdown
-     ☐ little stylesheet
-     ☐ md2pdf
-     ☐ github markdown
-     ☐ documentation?
-   ☐ exercise, write a web page with notebooks: header, image, lorem and a piece of code
 
  ☐ Securing the notebook via docker compose
    ☐ (environment PASSWORD) @tip
 
 HADOOP:
-   ☐ not SPARK
-   ☐ not remote (but you may use EMR on Amazon)
-   ☐ a different docker image
-   ☐ how to run directly with HDFS (avoiding mrjob to copy)
-   ☐ Schemas compairing hadoop one container and spark many containers
-   ☐ commands to clean containers
-   docker stats (docker ps | grep containers_ | awk '{print $NF}')
+☐ Hadoop recap ?
+  ☐ not SPARK
+  ☐ not remote (but you may use EMR on Amazon)
+☐ a different docker image
+  ☐ Schemas compairing hadoop one container and spark many containers
 
 MRJOB:
   https://github.com/Yelp/mrjob/issues/1142
@@ -42,6 +40,7 @@ MRJOB:
     https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
 ☐ mrjob runners
 http://mrjob.readthedocs.org/en/latest/guides/runners.html
+☐ how to run directly with HDFS (avoiding mrjob to copy)
 
  FINAL HELP:
    like http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/milano/pydata/install/help.ipynb
