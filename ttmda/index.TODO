@@ -19,13 +19,12 @@ Magic and extensions:
      ✔ github markdown @done (15-10-11 17:04)
      ✔ documentation? @done (15-10-11 17:09)
    ✔ exercise, write a web page with notebooks: header, image, lorem and a piece of code @done (15-10-11 17:12)
- ☐ Execises solutions
 
  ☐ Securing the notebook via docker compose
    ☐ (environment PASSWORD) @tip
 
 HADOOP:
-☐ Hadoop recap ?
+✔ Hadoop recap ? @done (15-10-12 07:35)
   ☐ not SPARK
   ☐ not remote (but you may use EMR on Amazon)
 ☐ a different docker image
