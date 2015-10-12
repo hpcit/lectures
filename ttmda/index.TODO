@@ -5,45 +5,25 @@ http://bit.ly/cineca_course_instructions
 --- ✄ -----------------------
 # SLIDES
 
-Magic and extensions:
- ✔ Ipython magic @done (15-10-11 12:46)
-   ✔ exercise: write a bash file and execute it from within the ipython kernel @done (15-10-11 12:58)
- ✔ %magic is for line @done (15-10-11 13:03)
-   ✔ %%magic is for cell @done (15-10-11 13:03)
- ✔ Make the magic: Write extension @done (15-10-11 13:22)
-   ✔ exercise, write line extension and test it via notebook @done (15-10-11 13:22)
- ✔ Slides and reveal @done (15-10-11 17:01)
-   ✔ Markdown @done (15-10-11 17:01)
-     ✔ little stylesheet @done (15-10-11 17:01)
-     ✔ md2pdf @done (15-10-11 17:04)
-     ✔ github markdown @done (15-10-11 17:04)
-     ✔ documentation? @done (15-10-11 17:09)
-   ✔ exercise, write a web page with notebooks: header, image, lorem and a piece of code @done (15-10-11 17:12)
-
- ☐ Securing the notebook via docker compose
-   ☐ (environment PASSWORD) @tip
-
-HADOOP:
-✔ Hadoop recap ? @done (15-10-12 07:35)
-  ☐ not SPARK
-  ☐ not remote (but you may use EMR on Amazon)
-☐ a different docker image
-  ☐ Schemas compairing hadoop one container and spark many containers
-
 MRJOB:
   https://github.com/Yelp/mrjob/issues/1142
-☐ Open port to check hadoop execution?
- ☐ ipyhost... convert name or add host?
 ☐ Do jobs
     https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
     https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
 ☐ mrjob runners
 http://mrjob.readthedocs.org/en/latest/guides/runners.html
+☐ Note: hadoop
+  ☐ not remote (but you may use EMR on Amazon)
 ☐ how to run directly with HDFS (avoiding mrjob to copy)
+
+DOCKER:
+ ☐ Securing the notebook via docker compose
+   ☐ (environment PASSWORD) @tip
 
  FINAL HELP:
    like http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/milano/pydata/install/help.ipynb
    ☐ How to get ready for the other docker setup
+   ☐ Docker schema for the two situations
 
 --- ✄ -----------------------
 FOR THE FUTURE
@@ -123,3 +103,28 @@ Introduction:
  ✔ Python introspection: everything is an object @done (15-10-10 18:32)
    ✔ exercise:  create a function that generates a random string of random size @done (15-10-10 18:32)
  ✘ Markdown and reference @cancelled (15-10-10 18:32)
+
+
+Magic and extensions:
+ ✔ Ipython magic @done (15-10-11 12:46)
+   ✔ exercise: write a bash file and execute it from within the ipython kernel @done (15-10-11 12:58)
+ ✔ %magic is for line @done (15-10-11 13:03)
+   ✔ %%magic is for cell @done (15-10-11 13:03)
+ ✔ Make the magic: Write extension @done (15-10-11 13:22)
+   ✔ exercise, write line extension and test it via notebook @done (15-10-11 13:22)
+ ✔ Slides and reveal @done (15-10-11 17:01)
+   ✔ Markdown @done (15-10-11 17:01)
+     ✔ little stylesheet @done (15-10-11 17:01)
+     ✔ md2pdf @done (15-10-11 17:04)
+     ✔ github markdown @done (15-10-11 17:04)
+     ✔ documentation? @done (15-10-11 17:09)
+   ✔ exercise, write a web page with notebooks: header, image, lorem and a piece of code @done (15-10-11 17:12)
+
+HADOOP:
+✔ Hadoop recap ? @done (15-10-12 07:35)
+  ✘ not SPARK @cancelled (15-10-13 00:03)
+✘ a different docker image @cancelled (15-10-13 00:03)
+✔ ipyhost... convert name or add host? @done (15-10-12 22:25)
+✔ new variables (hadoop jar and hadoop examples) inside the container? @done (15-10-12 23:24)
+✔ Open port to check hadoop execution? @done (15-10-13 00:03)
+ ✘ yarn logs -applicationId @cancelled (15-10-13 00:03)
