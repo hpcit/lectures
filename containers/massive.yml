@@ -67,15 +67,21 @@ sparkclient:
     volumes_from:
         - sparkdata
     volumes:
-        - ../data:/data/worker
         - ../ttmda/spark:/data
 
 hadoopclient:
     image: cineca/hadoopnotebook
     hostname: ipyhadoop
     ports:
-        - 80:8888
+        - 80:8888   #notebook
+        - 8042:8042 #yarn
+        - 8088:8088 #hadoop track jobs
+        - 19888:19888 #yarn
+    volumes_from:
+        - sparkdata
     volumes:
         - ../ttmda/hadoop:/data
         - ../ipython_extensions:/root/.ipython/extensions:ro
-        #- ../ttmda/info:/data/jobs/info
+        # Remove
+        - ../ttmda/info:/data/info
+        #- ../pydata:/data/tmp
