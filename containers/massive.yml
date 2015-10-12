@@ -73,11 +73,15 @@ hadoopclient:
     image: cineca/hadoopnotebook
     hostname: ipyhadoop
     ports:
-        - 80:8888
+        - 80:8888   #notebook
+        - 8088:8088 #hadoop track jobs
+        # what are the hadoop ports??
+        # 8042? 19888??
     volumes_from:
         - sparkdata
     volumes:
         - ../ttmda/hadoop:/data
         - ../ipython_extensions:/root/.ipython/extensions:ro
-        #- ../ttmda/info:/data/jobs/info
+        # Remove
+        - ../ttmda/info:/data/info
         #- ../pydata:/data/tmp
