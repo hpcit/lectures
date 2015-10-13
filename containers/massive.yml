@@ -82,6 +82,5 @@ hadoopclient:
     volumes:
         - ../ttmda/hadoop:/data
         - ../ipython_extensions:/root/.ipython/extensions:ro
-        # Remove
-        - ../ttmda/info:/data/info
+        #- ../ttmda/info:/data/info
         #- ../pydata:/data/tmp

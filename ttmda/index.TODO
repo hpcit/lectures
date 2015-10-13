@@ -15,15 +15,24 @@ http://mrjob.readthedocs.org/en/latest/guides/runners.html
 ☐ Note: hadoop
   ☐ not remote (but you may use EMR on Amazon)
 ☐ how to run directly with HDFS (avoiding mrjob to copy)
+☐ NGS
 
-DOCKER:
+DOCKER
+ ☐ Created bash scripts as alternatives to compose
+ ☐ Two environments (hadoop and spark) may not run at the same time
+   ☐ because they both use the port 80 for jupyter service
  ☐ Securing the notebook via docker compose
    ☐ (environment PASSWORD) @tip
 
- FINAL HELP:
-   like http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/milano/pydata/install/help.ipynb
-   ☐ How to get ready for the other docker setup
-   ☐ Docker schema for the two situations
+FINAL STEPS:
+☐ @HELP
+like http://nbviewer.ipython.org/github/cineca-scai/lectures/blob/milano/pydata/install/help.ipynb
+☐ How to get ready for the other docker setup
+☐ Docker schema for the two situations
+☐ Clean presentations
+  ☐ rerun kernels
+  ☐ change to None slides
+☐ Exercises solutions!!
 
 --- ✄ -----------------------
 FOR THE FUTURE
