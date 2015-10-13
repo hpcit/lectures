@@ -7,6 +7,8 @@ http://bit.ly/cineca_course_instructions
 
 MRJOB:
   https://github.com/Yelp/mrjob/issues/1142
+ ☐ relink download  file with wget
+ ☐ great documentation (link 0.5dev)
 ☐ Do jobs
     https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
     https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
@@ -23,6 +25,7 @@ DOCKER
    ☐ because they both use the port 80 for jupyter service
  ☐ Securing the notebook via docker compose
    ☐ (environment PASSWORD) @tip
+tail -n 4 containers/spark.sh
 
 FINAL STEPS:
 ☐ @HELP
