@@ -17,7 +17,10 @@ http://mrjob.readthedocs.org/en/latest/guides/runners.html
 ☐ how to run directly with HDFS (avoiding mrjob to copy)
 ☐ NGS
 
-DOCKER:
+DOCKER
+ ☐ Created bash scripts as alternatives to compose
+ ☐ Two environments (hadoop and spark) may not run at the same time
+   ☐ because they both use the port 80 for jupyter service
  ☐ Securing the notebook via docker compose
    ☐ (environment PASSWORD) @tip
 
