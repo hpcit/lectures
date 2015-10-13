@@ -6,21 +6,19 @@ http://bit.ly/cineca_course_instructions
 # SLIDES
 
 MRJOB:
-  https://github.com/Yelp/mrjob/issues/1142
- ☐ relink download  file with wget
- ☐ great documentation (link 0.5dev)
-☐ Do jobs
-    https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
-    https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
+ ✔ relink download  file with wget @done (15-10-13 14:35)
+ ✔ great documentation (link 0.5dev) @done (15-10-13 14:35)
+✔ Note: hadoop @done (15-10-13 15:05)
+  ✔ not remote (but you may use EMR on Amazon) @done (15-10-13 15:05)
+✔ how to run directly with HDFS (avoiding mrjob to copy) @done (15-10-13 15:05)
 ☐ mrjob runners
 http://mrjob.readthedocs.org/en/latest/guides/runners.html
-☐ Note: hadoop
-  ☐ not remote (but you may use EMR on Amazon)
-☐ how to run directly with HDFS (avoiding mrjob to copy)
+https://raw.githubusercontent.com/cineca-scai/course-exercises/master/ngs/mrjob/runner.py
+https://github.com/cineca-scai/course-exercises/blob/master/ngs/mrjob/job.py#L30
 ☐ NGS
 
-DOCKER
- ☐ Created bash scripts as alternatives to compose
+DOCKER:
+ ✔ Created bash scripts as alternatives to compose @done (15-10-13 15:05)
  ☐ Two environments (hadoop and spark) may not run at the same time
    ☐ because they both use the port 80 for jupyter service
  ☐ Securing the notebook via docker compose
