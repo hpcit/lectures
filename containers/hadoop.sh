@@ -1,7 +1,7 @@
 
 # A hadoop/jupyter container
 docker run -d -h ipyhadoop \
-    --name containers_hadoopclient_1
+    --name containers_hadoopclient_1 \
     -v $(pwd)/ttmda/hadoop:/data \
     -v $(pwd)/ipython_extensions:/root/.ipython/extensions:ro \
     -v $(pwd)/data:/data/worker \
