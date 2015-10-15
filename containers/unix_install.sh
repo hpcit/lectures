@@ -6,7 +6,7 @@ project='lectures'
 company='cineca-scai'
 git_url="https://github.com/$company/$project.git"
 branch="massive-analysis"
-dir="$HOME/$project"
+dir="$HOME/${project}-user"
 
 ##################################
 echo "Checking pre-requisites"
