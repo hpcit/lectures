@@ -94,6 +94,11 @@ WORKDIR /tmp
 RUN wget -q https://github.com/pdonorio/RISE/archive/master.tar.gz \
     && tar xvzf *.gz && cd *master && \
     python setup.py install > /tmp/rise.log && rm -rf /tmp/*
+# Add offline use of mathjax (latest stable release)
+ENV MATHJ_REL 2.5.3.zip
+RUN wget -q https://github.com/mathjax/MathJax/archive/$MATHJ_REL && \
+    python -m IPython.external.mathjax $MATHJ_REL && \
+    rm $MATHJ_REL
 
 #####################
 # Cineca lectures
