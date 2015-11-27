@@ -10,7 +10,7 @@ script*.py
 mytest*
 whois_*.py
 sol.ipynb
-ttmda/hadoop/Solutions.ipynb
+*\!.ipynb
 ttmda/hadoop/*.py
 data/*sam
 data/*txt
