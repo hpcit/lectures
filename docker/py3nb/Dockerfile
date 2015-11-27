@@ -104,9 +104,15 @@ RUN wget -q https://github.com/mathjax/MathJax/archive/$MATHJ_REL && \
 # Cineca lectures
 ADD boot.sh /boot.sh
 
+#####################
+# Ipython extensions?
+USER root
+WORKDIR /home/$NB_USER/.ipython/extensions
+ENV GIT_MASTER https://raw.githubusercontent.com/cineca-scai/lectures/master
+RUN wget -q $GIT_MASTER/ipython_extensions/version_information.py
+
 ######################
 WORKDIR /data
-USER root
 RUN chmod +x /boot.sh
 ENV TERM xterm
 CMD ["/boot.sh"]
