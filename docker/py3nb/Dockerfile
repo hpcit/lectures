@@ -110,9 +110,10 @@ USER root
 WORKDIR /home/$NB_USER/.ipython/extensions
 ENV GIT_MASTER https://raw.githubusercontent.com/cineca-scai/lectures/master
 RUN wget -q $GIT_MASTER/ipython_extensions/version_information.py
+WORKDIR /data
+RUN chown -R $NB_USER /home/$NB_USER/.ipython
 
 ######################
-WORKDIR /data
 RUN chmod +x /boot.sh
 ENV TERM xterm
 CMD ["/boot.sh"]
