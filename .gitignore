@@ -13,7 +13,8 @@ sol.ipynb
 *\!.ipynb
 ttmda/hadoop/*.py
 data/*sam
-data/*txt
+#data/*txt
+solutions/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
