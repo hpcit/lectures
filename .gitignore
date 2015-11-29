@@ -3,6 +3,7 @@
 
 # Notebooks
 .ipynb*
+ipython_log*
 
 # Tests
 automatic*.py
