@@ -14,7 +14,7 @@ sol.ipynb
 ttmda/hadoop/*.py
 data/*sam
 #data/*txt
-solutions/
+#solutions/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
