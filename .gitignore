@@ -6,6 +6,8 @@
 ipython_log*
 
 # Tests
+*.sql
+tmp
 automatic*.py
 script*.py
 mytest*
