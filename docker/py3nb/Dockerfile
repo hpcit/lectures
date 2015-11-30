@@ -7,9 +7,12 @@ MAINTAINER "Paolo D'Onorio De Meo <p.donoriodemeo@gmail.com>"
 # Install all OS dependencies for fully functional notebook server
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -yq --no-install-recommends \
+    # Various
     git vim wget build-essential python-dev bzip2 unzip libsm6 \
     ca-certificates pandoc sudo \
     libglib2.0-0 libxext6 libxrender1 libxml2-dev libxslt1-dev \
+    # R statistical
+    libreadline-dev r-base r-base-dev \
     # texlive-latex-base texlive-latex-extra \
     # texlive-fonts-extra texlive-fonts-recommended \
     && apt-get clean && rm -rf /tmp/*
@@ -112,6 +115,7 @@ ENV GIT_MASTER https://raw.githubusercontent.com/cineca-scai/lectures/master
 RUN wget -q $GIT_MASTER/ipython_extensions/version_information.py
 WORKDIR /data
 RUN chown -R $NB_USER /home/$NB_USER/.ipython
+RUN pip install rpy2
 
 ######################
 RUN chmod +x /boot.sh
