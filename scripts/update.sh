@@ -5,5 +5,4 @@ cd /data/lectures
 git checkout science-rome
 git pull origin science-rome
 echo "Updated:"
-ls /data/lectures/*ipynb
-
+ls /data/lectures/*/*ipynb
