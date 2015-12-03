@@ -6,3 +6,5 @@ git checkout science-rome
 git pull origin science-rome
 echo "Updated:"
 ls /data/lectures/*/*ipynb
+chown -R $NB_USER /data
+
