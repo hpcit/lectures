@@ -3,15 +3,21 @@
 
 # Notebooks
 .ipynb*
+ipython_log*
 
 # Tests
+*.sql
+tmp
 automatic*.py
-script_*.py
+script*.py
 mytest*
 whois_*.py
 sol.ipynb
+*\!.ipynb
 ttmda/hadoop/*.py
 data/*sam
+#data/*txt
+#solutions/
 data/*txt
 tmp
 
