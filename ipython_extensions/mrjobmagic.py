@@ -12,6 +12,12 @@ http://ipython.readthedocs.org/en/stable/config/custommagics.html#defining-magic
 
 import os
 from IPython.core.magic import register_line_cell_magic
+
+###################################
+# The best way to call python inside an ipython extension
+from IPython import get_ipython
+ip = get_ipython()
+
 JOBDIR = "jobs"
 JOBFILE = "script"
 
@@ -32,7 +38,7 @@ class MrJobTemplate(object):
             randnum = random.randint(1, 99999)
             randpad = str(randnum).zfill(9)
             self.filename = os.path.join(JOBDIR, JOBFILE +'_'+ randpad + '.py')
-        print("Saving", self.filename)
+        print("Saving the python class in: %s " % self.filename)
 
         # Create the class
         self.add_content(self.header())
@@ -96,18 +102,9 @@ class MrJobTemplate(object):
 
 def execute_ipython_cmd(args):
     cmd = " ".join(args)
-    print("Executing", cmd)
-    ###################################
-    # The best way to call python inside an ipython extension
-    from IPython import get_ipython
-    ip = get_ipython()
-    # ip.ex('import os')
-    # ip.magic('%cd -b relfiles')
-    # ip.system('ls -F')
-    ###################################
-# Note: save to output file
-# Note bis: get the output file
+    print("Executing Mrjob.") #, cmd)
     ip.system(cmd)
+    print("Done!")
     return cmd
 
 @register_line_cell_magic
@@ -129,7 +126,7 @@ def mapreduce(line, cell=None):
         print("ERROR: Provide at least one line option as Input File")
         return
     finput = options[0]
-    print("Input file is %s" % finput)
+    print("Input file is: %s" % finput)
 
     if cell is None:
         ########################
@@ -153,10 +150,27 @@ def mapreduce(line, cell=None):
         script = template.get_file()
 
     # Command for MapReduce
-    args = ['python3', script, '-r', destination, finput]
+    outfile = script+'.out'
+    args = ['python3', script, \
+        '-r', destination, finput, \
+        '1>', outfile, '2>', script+'.err'
+        ]
     # Execute the command
     execute_ipython_cmd(args)
-    return script
+    # List files
+    print("\nFiles:")
+    ip.system("ls " + script + "*")
+    # Get output
+    data = {}
+    if os.path.exists(outfile):
+        with open(outfile) as out:
+            outstring = out.read()
+        for line in outstring.split('\n'):
+            if line.strip() == '':
+                continue
+            tmp = line.split('\t')
+            data[tmp[0].strip('"')] = int(tmp[1])
+    return data
 
 def load_ipython_extension(ipython):
     """ This function is called when the extension is loaded """
