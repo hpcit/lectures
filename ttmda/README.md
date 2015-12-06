@@ -9,17 +9,13 @@ A read-only version of our notebooks can be accessed with [nbviewer](http://nbvi
 ## Prerequisites
 
 * git 1.7+
-* docker 1.8+
-* docker-compose 1.4+
+* docker 1.9+
 
-To install docker and docker-compose on a unix terminal, you can:
+To install docker on a unix terminal, you can:
 
 ```
 # Install docker
 curl -sSL https://get.docker.com/ | sh
-
-# Install docker-compose
-pip install -U docker-compose
 ```
 
 For Mac and Windows user the best way to get Docker tools working,
@@ -27,45 +23,10 @@ is using their new [toolbox](https://www.docker.com/toolbox).
 
 ## How to use lectures interactively
 
-Clone the repo and use docker compose configuration.
 On a terminal:
 
 ```
-# Download this repository
-$ git clone https://github.com/cineca-scai/lectures.git
-
-# Use the branch for this specific lecture
-$ cd lectures && git checkout massive-analysis
-
-# Download docker images (warning: size ~ 8GB)
-$ docker-compose -f containers/massive.yml pull
-```
-
-There is also a script available for `UNIX`,
-to help you get to this point.
-You can use it with the single command:
-
-```
-wget -qO- http://j.mp/massive_unixinstall | sh
-```
-
-Once you have directories and tools ready,
-you can use docker compose to launch one of the available configurations.
-
-### Configuration A: Jupyter, Hadoop and Mrjob
-
-```
-# Launch the notebook
-docker-compose -f containers/massive.yml up hadoopclient
-# Launch Hadoop cluster
-docker exec -it containers_hadoopclient_1 /etc/bootstrap.sh
-```
-
-### Configuration B: Jupyter, Hadoop and Mrjob
-
-```
-# Bring up the Spark cluster and the Jupyter notebook server
-$ docker-compose -f containers/massive.yml up sparkclient
+$ docker run -d -p 80:8888 -v spark:/data cineca/nbsparkling
 ```
 
 ### Access the web jupyter notebooks pages
