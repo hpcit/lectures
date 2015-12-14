@@ -139,6 +139,7 @@ def mapreduce(line, cell=None):
         script = options[1]
         if noptions == 3:
             destination = options[2]
+            print("Executing MRJob in '%s'" % destination)
     else:
         ########################
         ## CELL
