@@ -8,7 +8,6 @@ A read-only version of our notebooks can be accessed with [nbviewer](http://nbvi
 
 ## Prerequisites
 
-* git 1.7+
 * docker 1.9+
 
 To install docker on a unix terminal, you can:
