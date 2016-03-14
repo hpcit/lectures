@@ -3,6 +3,9 @@
 
 This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-2015).
 
+A read-only version of our notebooks can be accessed with [nbviewer](http://nbviewer.jupyter.org/github/cineca-scai/lectures/tree/datascience-bbs/bbs/)
+free service reading the GitHub repository.
+
 ## Prerequisites
 
 * docker 1.9+
