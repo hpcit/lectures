@@ -25,9 +25,11 @@ is using their new [toolbox](https://www.docker.com/toolbox).
 On a terminal, launch the docker image:
 
 ```
-docker run -d --name spark \
+docker run -d \
+    --name mapreduce \
     -e LECTURE_BRANCH=datascience-bbs \
     -e LECTURE_PATH=bbs/hadoop \
+    -h mapreduce
     -v cineca_spark_volume:/data/lectures \
     -p 80:8888 \
     cineca/nbsparkling
@@ -35,9 +37,9 @@ docker run -d --name spark \
 ## Other operations:
 
 # To freeze the container
-docker stop spark
+docker stop mapreduce
 # To remove the frozen container
-docker rm spark
+docker rm mapreduce
 ```
 
 ### Access the web jupyter notebooks pages
