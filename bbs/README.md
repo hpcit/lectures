@@ -22,10 +22,22 @@ is using their new [toolbox](https://www.docker.com/toolbox).
 
 ## How to use lectures interactively
 
-On a terminal:
+On a terminal, launch the docker image:
 
 ```
-$ docker run -d -p 80:8888 -v spark:/data cineca/nbsparkling
+docker run -d --name spark \
+    -e LECTURE_BRANCH=datascience-bbs \
+    -e LECTURE_PATH=bbs/hadoop \
+    -v cineca_spark_volume:/data/lectures \
+    -p 80:8888 \
+    cineca/nbsparkling
+
+## Other operations:
+
+# To freeze the container
+docker stop spark
+# To remove the frozen container
+docker rm spark
 ```
 
 ### Access the web jupyter notebooks pages
