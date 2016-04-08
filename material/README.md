@@ -1,10 +1,10 @@
 
 # Mastering tools and techniques for data analysis
 
-This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-2015).
+This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-events-list-2016).
 
-A read-only version of our notebooks can be accessed with [nbviewer](http://nbviewer.jupyter.org/github/cineca-scai/lectures/tree/datascience-bbs/bbs/)
-free service reading the GitHub repository.
+A read-only version of our notebooks can be accessed with
+[nbviewer](http://nbviewer.jupyter.org/github/cineca-scai/lectures/tree/sns/material/) free service reading the GitHub repository.
 
 ## Prerequisites
 
@@ -26,10 +26,10 @@ On a terminal, launch the docker image:
 
 ```
 docker run -d \
-    --name mapreduce \
-    -e LECTURE_BRANCH=datascience-bbs \
-    -e LECTURE_PATH=bbs/hadoop \
-    -h mapreduce
+    --name mynotebook \
+    -e LECTURE_BRANCH=sns \
+    -e LECTURE_PATH=material \
+    -h mynotebook \
     -v cineca_spark_volume:/data/lectures \
     -p 80:8888 \
     cineca/nbsparkling
@@ -37,9 +37,9 @@ docker run -d \
 ## Other operations:
 
 # To freeze the container
-docker stop mapreduce
+docker stop mynotebook
 # To remove the frozen container
-docker rm mapreduce
+docker rm mynotebook
 ```
 
 ### Access the web jupyter notebooks pages
