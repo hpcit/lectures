@@ -1,7 +1,7 @@
 
-# Mastering tools and techniques for data analysis
+# Python, notebooks, objects and MapReduce
 
-This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-events-list-2016).
+This is a [CINECA](http://www.cineca.it/) [training event](http://www.hpc.cineca.it/content/training-events-list-2016).
 
 A read-only version of our notebooks can be accessed with
 [nbviewer](http://nbviewer.jupyter.org/github/cineca-scai/lectures/tree/sns/material/) free service reading the GitHub repository.
