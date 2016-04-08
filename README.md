@@ -12,12 +12,15 @@ Presentations for our CINECA-SCAI courses
 
 Our lectures are available as branches inside this repository:
 
-- [Python for computational science](https://github.com/cineca-scai/lectures/tree/science-rome/pyscience)
+- [Python for computational science](https://github.com/cineca-scai/lectures/tree/science-rome/pyscience) @Rome2015
 
-- [Tools and techniques for massive data
-analysis](https://github.com/cineca-scai/lectures/tree/massive-analysis/ttmda)
+- [Tools and techniques for massive data
+analysis](https://github.com/cineca-scai/lectures/tree/massive-analysis/ttmda) @Bologna2016
 
-- [One day about Pydata](https://github.com/cineca-scai/lectures/tree/milano/pydata)
+- [One day about Pydata](https://github.com/cineca-scai/lectures/tree/milano/pydata) @Milano2016
+
+- [Python, objects and MapReduce](https://github.com/cineca-scai/lectures/tree/sns/material) @Pisa2016
+
 
 ---
 
