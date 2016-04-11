@@ -1,9 +1,9 @@
 
 # Mastering tools and techniques for data analysis
 
-This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-2015).
+This is a [CINECA](http://www.cineca.it/) [course](http://www.hpc.cineca.it/content/training-events-list-2016).
 
-A read-only version of our notebooks can be accessed with [nbviewer](http://nbviewer.jupyter.org/github/cineca-scai/lectures/tree/datascience-bbs/bbs/)
+A read-only version of our notebooks can be accessed with [nbviewer](http://nbviewer.jupyter.org/github/cineca-scai/lectures/tree/datanalytics/material/)
 free service reading the GitHub repository.
 
 ## Prerequisites
@@ -26,10 +26,10 @@ On a terminal, launch the docker image:
 
 ```
 docker run -d \
-    --name mapreduce \
-    -e LECTURE_BRANCH=datascience-bbs \
-    -e LECTURE_PATH=bbs/hadoop \
-    -h mapreduce
+    --name notebook \
+    -e LECTURE_BRANCH=datanalytics \
+    -e LECTURE_PATH=material \
+    -h notebook
     -v cineca_spark_volume:/data/lectures \
     -p 80:8888 \
     cineca/nbsparkling
