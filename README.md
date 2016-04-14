@@ -15,7 +15,7 @@ Our lectures are available as branches inside this repository:
 - [Python for computational science](https://github.com/cineca-scai/lectures/tree/science-rome/pyscience) @Rome2015
 
 - [Tools and techniques for massive data
-analysis](https://github.com/cineca-scai/lectures/tree/massive-analysis/ttmda) @Bologna2016
+analysis](https://github.com/cineca-scai/lectures/tree/datanalytics/material) @Bologna2016
 
 - [One day about Pydata](https://github.com/cineca-scai/lectures/tree/milano/pydata) @Milano2016
 
