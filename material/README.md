@@ -37,9 +37,9 @@ docker run -d \
 ## Other operations:
 
 # To freeze the container
-docker stop mapreduce
+docker stop notebook
 # To remove the frozen container
-docker rm mapreduce
+docker rm notebook
 ```
 
 ### Access the web jupyter notebooks pages
