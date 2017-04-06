@@ -1,14 +1,14 @@
 
 # Python, notebooks, objects and MapReduce
 
-This is a [CINECA](http://www.cineca.it/) [training event](http://www.hpc.cineca.it/content/training-events-list-2016).
+This is a [CINECA](http://www.cineca.it/) training event.
 
 A read-only version of our notebooks can be accessed with
 [nbviewer](http://nbviewer.jupyter.org/github/cineca-scai/lectures/tree/sns/material/) free service reading the GitHub repository.
 
 ## Prerequisites
 
-* docker 1.9+
+* docker 1.13+
 
 To install docker on a unix terminal, you can:
 
@@ -32,7 +32,7 @@ docker run -d \
     -h mynotebook \
     -v cineca_spark_volume:/data/lectures \
     -p 80:8888 \
-    cineca/nbsparkling
+    pdonorio/jupy36:alpine
 
 ## Other operations:
 
