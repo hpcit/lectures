@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -A TRAIN_CBBS2017            
+#PBS -l walltime=2:00:00
+#PBS -l select=1:ncpus=5
+#PBS -o job.out
+#PBS -e job.err
+#PBS -q parallel
+#
+module load profile/advanced
+module  load autoload r/3.2.3
+R --vanilla < /pico/home/userinternal/gpedrazz/kmeans.R > /pico/home/userinternal/gpedrazz/kmeans.out
